@@ -56,24 +56,55 @@ namespace Unosquare.TinySine.RelayModule
 
         #region Methods
 
+        private bool ReadBoolean(OperationCode opCode)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool ReadBoolean(OperationCode opCode, byte arg)
+        {
+            throw new NotImplementedException();
+        }
+
+        private string ReadString(OperationCode opCode)
+        {
+            throw new NotImplementedException();
+        }
+
         private void InitializeProperties()
         {
             Password = DefaultPassword;
+            BoardModel = ReadString(OperationCode.GetBoardModel);
+            BoardVersion = ReadString(OperationCode.GetBoardVersion);
+            RelayChannelCount = 2; // TODO: Parse the board version
+
+        }
+
+        private static byte[] EncodePassword(string sixDigitPassword)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static string DecodePassword(byte[] encodedPassword)
+        {
+            throw new NotImplementedException();
         }
 
         private bool VerifyPassword(string sixDigitPassword)
         {
+            var password = EncodePassword(sixDigitPassword);
             throw new NotImplementedException();
         }
 
         private void SetPassword(string sixDigitPassword)
         {
+            var password = EncodePassword(sixDigitPassword);
             throw new NotImplementedException();
         }
 
         private bool GetRelayState(RelayNumber relayNumber)
         {
-            throw new NotImplementedException();
+            return ReadBoolean(OperationCode.GetRelayState, (byte)relayNumber)
         }
 
         private bool SetRelayState(RelayNumber relayNumber, bool state)
