@@ -68,7 +68,9 @@ namespace Unosquare.TinySine.RelayModule
 
         private string ReadString(OperationCode opCode)
         {
-            throw new NotImplementedException();
+            Write(new byte[] { (byte)opCode });
+            var response = Read();
+            return Encoding.ASCII.GetString(response);
         }
 
         private void InitializeProperties()
@@ -79,7 +81,13 @@ namespace Unosquare.TinySine.RelayModule
             RelayChannelCount = 2; // TODO: Parse the board version
 
         }
-
+        private void UninitializeVariables()
+        {
+            m_Password = DefaultPassword;
+            BoardModel = null;
+            BoardVersion = null;
+            RelayChannelCount = 0;
+        }
         private static byte[] EncodePassword(string sixDigitPassword)
         {
             throw new NotImplementedException();
@@ -260,6 +268,15 @@ namespace Unosquare.TinySine.RelayModule
         }
 
         /// <summary>
+        /// Writes the specified payload synchronously.
+        /// </summary>
+        /// <param name="payload">The payload.</param>
+        public void Write(byte[] payload)
+        {
+            WriteAsync(payload).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// Writes data to the serial port asynchronously
         /// </summary>
         /// <param name="payload">The payload.</param>
@@ -301,6 +318,15 @@ namespace Unosquare.TinySine.RelayModule
         /// Flushes the serial port read data discarding all bytes in the read buffer
         /// </summary>
         /// <returns></returns>
+        private int FlushReadBuffer()
+        {
+            return FlushReadBufferAsync().GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Flushes the serial port read data discarding all bytes in the read buffer
+        /// </summary>
+        /// <returns></returns>
         private async Task<int> FlushReadBufferAsync()
         {
             if (SerialPort == null || SerialPort.IsOpen == false)
@@ -331,6 +357,26 @@ namespace Unosquare.TinySine.RelayModule
 
 
 
+        }
+
+        /// <summary>
+        /// Reads the specified timeout.
+        /// </summary>
+        /// <param name="timeout">The timeout.</param>
+        /// <param name="expectedBytes">The expected bytes.</param>
+        /// <returns></returns>
+        public byte[] Read(TimeSpan timeout, int expectedBytes)
+        {
+            return ReadAsync(timeout, expectedBytes).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// Reads data from the serial port asynchronously with the default timeout and no expected packet size
+        /// </summary>
+        /// <returns></returns>
+        public byte[] Read()
+        {
+            return Read(DefaultTimeout, 0);
         }
 
         /// <summary>
@@ -413,10 +459,9 @@ namespace Unosquare.TinySine.RelayModule
             finally
             {
                 IsAuthenticated = false;
-                m_Password = DefaultPassword;
                 SerialPort.Dispose();
                 SerialPort = null;
-
+                UninitializeVariables();
             }
         }
 
