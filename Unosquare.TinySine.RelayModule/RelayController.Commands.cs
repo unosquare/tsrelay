@@ -132,6 +132,8 @@
 
         private decimal GetTemperature()
         {
+            //var pw = EncodePassword(Password);
+            //var payload = new byte[] { (byte)OperationCode.VerifyPassword, pw[0], pw[1], pw[2], (byte)OperationCode.GetTemperature };
             var payload = new byte[] { (byte)OperationCode.GetTemperature };
             Write(payload);
             var response = Read(DefaultTimeout, 0);

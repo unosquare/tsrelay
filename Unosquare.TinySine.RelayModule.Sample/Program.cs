@@ -26,12 +26,14 @@
 
                 Log.ReadKey("Press any key to set relay 1 to high", true);
                 relayBoard[RelayNumber.Relay01] = true;
+                DumpRelayState(relayBoard);
 
                 Log.ReadKey("Press any key to set relay 2 to high", true);
                 relayBoard[RelayNumber.Relay02] = true;
-
-                Log.ReadKey("Press any key to dump the state of the relays", true);
                 DumpRelayState(relayBoard);
+
+                Log.ReadKey($"The temperature is {relayBoard.Temperature}", true);
+                Log.ReadKey($"The voltage is {relayBoard.WorkingVoltage}", true);
             }
 
             Log.ReadKey("Press any key to continue . . .", true);
