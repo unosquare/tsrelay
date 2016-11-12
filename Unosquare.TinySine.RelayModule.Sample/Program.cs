@@ -38,7 +38,8 @@ namespace Unosquare.TinySine.RelayModule.Sample
                     }
                     else if (selectedOption.Key == ConsoleKey.R)
                     {
-                        Log.Info($"Relay Board Working Voltage: {relayBoard.WorkingVoltage}, Temperature: {relayBoard.Temperature}");
+                        Log.Info($"Relay Board Working Voltage: {relayBoard.WorkingVoltage}");
+                        Log.Info($"Relay Board Temperature    : {relayBoard.Temperature}");
                     }
                     else if (selectedOption.Key == ConsoleKey.A)
                     {
@@ -89,8 +90,8 @@ namespace Unosquare.TinySine.RelayModule.Sample
             var states = relayBoard.GetRelaysStateDictionary();
 
             Log.Info("STATUS DUMP");
-            Log.Info($"RELAY:\t8\t7\t6\t5\t4\t3\t2\t1");
-            Log.Info($"STATE:\t" + 
+            Log.Info($"RELAY:     \t8\t7\t6\t5\t4\t3\t2\t1");
+            Log.Info($"STATE:     \t" + 
                 $"{(states[RelayNumber.Relay08] ? 1 : 0)}\t" +
                 $"{(states[RelayNumber.Relay07] ? 1 : 0)}\t" +
                 $"{(states[RelayNumber.Relay06] ? 1 : 0)}\t" +

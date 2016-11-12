@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Security;
+    using System.Threading;
 
     /// <summary>
     /// Represents a TinySine TOSR1 Relay Controller providing up to 8 relay channels
@@ -30,7 +31,7 @@
         /// Verifies the password on the device.
         /// </summary>
         /// <returns></returns>
-        public bool VerifyPassword()
+        public bool? VerifyPassword()
         {
             return VerifyPassword(Password);
         }
@@ -42,13 +43,14 @@
         /// <returns></returns>
         public bool ChangePassword(string sixDigitPassword)
         {
-            if (VerifyPassword(Password))
+            var verifyResult = VerifyPassword();
+            if (verifyResult.HasValue && verifyResult.Value)
             {
                 if (SetPassword(sixDigitPassword))
                 {
                     var result = VerifyPassword(sixDigitPassword);
                     Password = sixDigitPassword;
-                    return result;
+                    return result.HasValue && result.Value;
                 }
             }
 
@@ -66,7 +68,7 @@
             var result = new Dictionary<RelayNumber, bool>();
             foreach (var relay in relayNumbers)
             {
-                result[relay] = GetRelayState(relay);
+                result[relay] = GetRelayState(statesByte, relay);
             }
 
             return result;
@@ -117,6 +119,7 @@
 
         /// <summary>
         /// Gets or sets the relay operating mode.
+        /// Wehn setting the operating mode the relays are reset by setting all highs and then setting all lows.
         /// </summary>
         public RelayOperatingMode RelayOperatingMode
         {
@@ -124,7 +127,6 @@
             set
             {
                 SetOperatingMode(value);
-                VerifyPassword();
             }
         }
 

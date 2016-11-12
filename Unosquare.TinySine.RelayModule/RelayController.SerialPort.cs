@@ -116,8 +116,8 @@
                 SerialPort.ReadBufferSize = ReadBufferLength;
                 SerialPort.Open();
                 Password = sixDigitPassword;
-                if (VerifyPassword(Password) == false)
-                    throw new SecurityException("Invalid password");
+                if (SynchronizeCommunication() == false)
+                    throw new SecurityException("Invalid password or failed syncrhonization.");
 
                 Initialize();
             }
