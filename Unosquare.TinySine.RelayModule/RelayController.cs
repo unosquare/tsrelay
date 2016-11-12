@@ -27,6 +27,15 @@
         #region Methods
 
         /// <summary>
+        /// Verifies the password on the device.
+        /// </summary>
+        /// <returns></returns>
+        public bool VerifyPassword()
+        {
+            return VerifyPassword(Password);
+        }
+
+        /// <summary>
         /// Changes the password on the device.
         /// </summary>
         /// <param name="sixDigitPassword">The six digit password.</param>
@@ -109,7 +118,15 @@
         /// <summary>
         /// Gets or sets the relay operating mode.
         /// </summary>
-        public RelayOperatingMode RelayOperatingMode { get { return GetOperatingMode(); } set { SetOperatingMode(value); } }
+        public RelayOperatingMode RelayOperatingMode
+        {
+            get { return GetOperatingMode(); }
+            set
+            {
+                SetOperatingMode(value);
+                VerifyPassword();
+            }
+        }
 
         #endregion
 

@@ -63,7 +63,7 @@
                 OperationCode.SetRelayModeLatching : OperationCode.SetRelayModeMomentary) };
             Write(payload);
 
-            return GetOperatingMode();
+            return mode;
         }
 
         private RelayOperatingMode GetOperatingMode()
