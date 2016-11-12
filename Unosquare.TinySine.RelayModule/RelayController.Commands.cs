@@ -235,7 +235,7 @@
             //var payload = new byte[] { (byte)OperationCode.VerifyPassword, pw[0], pw[1], pw[2], (byte)OperationCode.GetTemperature };
             var payload = new byte[] { (byte)OperationCode.GetTemperature };
             Write(payload);
-            var response = Read(DefaultTimeout, 0);
+            var response = Read(TimeSpan.FromMilliseconds(100), 0);
 
             if (response == null)
             {
