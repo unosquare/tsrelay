@@ -80,6 +80,9 @@
             return passwordBytes;
         }
 
+        /// <summary>
+        /// Initializes read-once properties of the relay board.
+        /// </summary>
         private void Initialize()
         {
             BoardModel = GetBoardModel();
@@ -87,6 +90,10 @@
             RelayChannelCount = int.Parse(BitConverter.ToString(new byte[] { (byte)BoardModel })[0].ToString());
             FirmwareVersion = GetFirmwareVersion();
         }
+
+        /// <summary>
+        /// Clears read-once properties of the relay board
+        /// </summary>
         private void Uninitialize()
         {
             Password = DefaultPassword;
@@ -216,9 +223,6 @@
             {
                 SerialPortDone.Set();
             }
-
-
-
         }
 
         /// <summary>

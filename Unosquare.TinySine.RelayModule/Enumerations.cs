@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Unosquare.TinySine.RelayModule
+﻿namespace Unosquare.TinySine.RelayModule
 {
+    /// <summary>
+    /// Enumerates the relay board operating modes
+    /// </summary>
     public enum RelayOperatingMode : byte
     {
         Latching = 0x41,
         Momentary = 0x42,
     }
 
+    /// <summary>
+    /// Enumerates the relay numbers on the relay board
+    /// </summary>
     public enum RelayNumber : byte
     {
         Relay01 = 1,
@@ -24,6 +24,9 @@ namespace Unosquare.TinySine.RelayModule
         Relay08 = 8,
     }
 
+    /// <summary>
+    /// Enumerates all operation codes (commands) of the borad
+    /// </summary>
     internal enum OperationCode : byte
     {
         GetBoardModel = 0x3C,

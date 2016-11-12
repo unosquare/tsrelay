@@ -2,7 +2,6 @@
 {
     using System;
     using System.Globalization;
-    using System.Security;
     using System.Text;
     using System.Threading;
 
@@ -10,6 +9,10 @@
     {
         #region Command Methods
 
+        /// <summary>
+        /// Gets the board model.
+        /// </summary>
+        /// <returns></returns>
         private byte GetBoardModel()
         {
             var payload = new byte[] { (byte)OperationCode.GetBoardModel };
@@ -27,6 +30,10 @@
             return response[0];
         }
 
+        /// <summary>
+        /// Gets the board version.
+        /// </summary>
+        /// <returns></returns>
         private byte GetBoardVersion()
         {
             var payload = new byte[] { (byte)OperationCode.GetBoardVersion };
@@ -44,6 +51,10 @@
             return response[0];
         }
 
+        /// <summary>
+        /// Gets the password.
+        /// </summary>
+        /// <returns></returns>
         private string GetPassword()
         {
             var payload = new byte[] { (byte)OperationCode.GetPassword };
@@ -65,6 +76,11 @@
             return BitConverter.ToUInt32(encodedPassword, 0).ToString(CultureInfo.InvariantCulture);
         }
 
+        /// <summary>
+        /// Verifies the password.
+        /// </summary>
+        /// <param name="sixDigitPassword">The six digit password.</param>
+        /// <returns></returns>
         private bool? VerifyPassword(string sixDigitPassword)
         {
             var payload = new byte[] { (byte)OperationCode.VerifyPassword, 0, 0, 0 };
@@ -76,6 +92,11 @@
             return result;
         }
 
+        /// <summary>
+        /// Sets the password.
+        /// </summary>
+        /// <param name="sixDigitPassword">The six digit password.</param>
+        /// <returns></returns>
         private bool SetPassword(string sixDigitPassword)
         {
             var encodedPassword = EncodePassword(sixDigitPassword);
@@ -95,6 +116,11 @@
             return result;
         }
 
+        /// <summary>
+        /// Sets the operating mode.
+        /// </summary>
+        /// <param name="mode">The mode.</param>
+        /// <returns></returns>
         private bool SetOperatingMode(RelayOperatingMode mode)
         {
             var iteration = 0;
@@ -111,6 +137,10 @@
             return true;
         }
 
+        /// <summary>
+        /// Gets the operating mode.
+        /// </summary>
+        /// <returns></returns>
         private RelayOperatingMode GetOperatingMode()
         {
             var payload = new byte[] { (byte)OperationCode.GetRelayMode };
@@ -128,6 +158,10 @@
             return (RelayOperatingMode)response[0];
         }
 
+        /// <summary>
+        /// Gets the status.
+        /// </summary>
+        /// <returns></returns>
         private byte[] GetStatus()
         {
             var payload = new byte[] { (byte)OperationCode.GetStatus };
@@ -145,6 +179,10 @@
             return response;
         }
 
+        /// <summary>
+        /// Gets the firmware version.
+        /// </summary>
+        /// <returns></returns>
         private int GetFirmwareVersion()
         {
             var payload = new byte[] { (byte)OperationCode.GetFirmwareVersion };
@@ -165,6 +203,10 @@
             return Convert.ToInt32(BitConverter.ToUInt16(response, 0));
         }
 
+        /// <summary>
+        /// Gets the state of all relays as a byte. Each bit represents the state of each relay
+        /// </summary>
+        /// <returns></returns>
         private byte GetRelaysStateAll()
         {
             var payload = new byte[] { (byte)OperationCode.GetRelayState };
@@ -182,11 +224,22 @@
             return response[0];
         }
 
+        /// <summary>
+        /// Gets the state of the relay.
+        /// </summary>
+        /// <param name="relayNumber">The relay number.</param>
+        /// <returns></returns>
         private bool GetRelayState(RelayNumber relayNumber)
         {
             return GetRelayState(GetRelaysStateAll(), relayNumber);
         }
 
+        /// <summary>
+        /// Gets the state of the relay.
+        /// </summary>
+        /// <param name="relayStates">The relay states.</param>
+        /// <param name="relayNumber">The relay number.</param>
+        /// <returns></returns>
         private bool GetRelayState(byte relayStates, RelayNumber relayNumber)
         {
             var exponent = (int)(relayNumber - 1);
@@ -195,6 +248,10 @@
             return (relayStates & mask) != 0;
         }
 
+        /// <summary>
+        /// Gets the working voltage.
+        /// </summary>
+        /// <returns></returns>
         private byte GetWorkingVoltage()
         {
             var payload = new byte[] { (byte)OperationCode.GetWorkingVoltage };
@@ -212,6 +269,10 @@
             return response[0];
         }
 
+        /// <summary>
+        /// Gets the temperature raw data.
+        /// </summary>
+        /// <returns></returns>
         private byte[] GetTemperatureRawData()
         {
             var payload = new byte[] { (byte)OperationCode.GetTemperatureRaw };
@@ -229,6 +290,10 @@
             return response;
         }
 
+        /// <summary>
+        /// Gets the temperature.
+        /// </summary>
+        /// <returns></returns>
         private decimal GetTemperature()
         {
             //var pw = EncodePassword(Password);
@@ -253,6 +318,11 @@
             return 0;
         }
 
+        /// <summary>
+        /// Sets the relay state all.
+        /// </summary>
+        /// <param name="state">if set to <c>true</c> [state].</param>
+        /// <returns></returns>
         public bool SetRelayStateAll(bool state)
         {
             var payload = new byte[] { (byte)(state ? OperationCode.SetRelayStateAllHigh : OperationCode.SetRelayStateAllLow) };
@@ -260,6 +330,12 @@
             return SynchronizeCommunication();
         }
 
+        /// <summary>
+        /// Sets the state of the relay.
+        /// </summary>
+        /// <param name="relayNumber">The relay number.</param>
+        /// <param name="state">if set to <c>true</c> [state].</param>
+        /// <returns></returns>
         private bool SetRelayState(RelayNumber relayNumber, bool state)
         {
             var opCode = OperationCode.SetRelayState01High;
@@ -298,6 +374,10 @@
             return SynchronizeCommunication();
         }
 
+        /// <summary>
+        /// Synchronizes the communication between the serail port and the relay board.
+        /// </summary>
+        /// <returns></returns>
         private bool SynchronizeCommunication()
         {
             Log.Trace($"Synchronizing relay board communication . . .");
