@@ -29,7 +29,7 @@ namespace Unosquare.TinySine.RelayModule
         GetBoardModel = 0x3C,
         GetBoardVersion = 0x3D,
         GetPassword = 0x3E,
-        VerifyPassword = 0xF,
+        VerifyPassword = 0x3F,
         SetPassword = 0x40,
         SetRelayModeLatching = 0x41,
         SetRelayModeMomentary = 0x42,
