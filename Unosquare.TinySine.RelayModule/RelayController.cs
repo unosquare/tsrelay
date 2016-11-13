@@ -108,7 +108,15 @@
         /// <summary>
         /// Gets the temperature.
         /// </summary>
-        public decimal Temperature { get { return GetTemperature(); } }
+        public decimal Temperature
+        {
+            get
+            {
+                var tempRaw = GetTemperatureRawData();
+                var result = (255M * tempRaw[0] + tempRaw[1]) / 16M;
+                return result;
+            }
+        }
 
         /// <summary>
         /// Gets the working voltage.
