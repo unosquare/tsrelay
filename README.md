@@ -9,8 +9,9 @@
 * Nice sample application included for testing
 * MIT License
 
-## NuGet Installation:
+## ~~NuGet Installation:~~
 
+Note: Not yet published.
 ```
 PM> Install-Package Unosquare.TinySine.RelayModule
 ```
