@@ -1,15 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Unosquare.TinySine.RelayModule.Sample
+﻿namespace Unosquare.TinySine.RelayModule.Sample
 {
+    using System;
+    using System.Collections.Generic;
+
+    /// <summary>
+    /// This program is a simple console test that  
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Main entry point
+        /// </summary>
+        /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
             using (var relayBoard = new RelayController())
             {
-                relayBoard.Open("COM4", RelayController.DefaultPassword);
+                var isOpen = false;
+                var password = RelayController.DefaultPassword;
+
+                while (isOpen == false)
+                {
+                    try
+                    {
+                        relayBoard.Open("COM4", password);
+                        isOpen = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error(ex.Message);
+                        password = PromptForPassword();
+                    }
+                }
 
                 while (true)
                 {
@@ -40,6 +62,10 @@ namespace Unosquare.TinySine.RelayModule.Sample
                     {
                         Log.Info($"Relay Board Working Voltage: {relayBoard.WorkingVoltage}");
                         Log.Info($"Relay Board Temperature    : {relayBoard.Temperature}");
+                    }
+                    else if (selectedOption.Key == ConsoleKey.T)
+                    {
+                        relayBoard.ChangePassword(PromptForPassword());
                     }
                     else if (selectedOption.Key == ConsoleKey.A)
                     {
@@ -84,6 +110,37 @@ namespace Unosquare.TinySine.RelayModule.Sample
             Log.ReadKey("Press any key to continue . . .", true);
         }
 
+        /// <summary>
+        /// Prompts for password.
+        /// </summary>
+        /// <returns></returns>
+        static private string PromptForPassword()
+        {
+            var enteredSixDigitPassword = false;
+            var password = string.Empty;
+
+            while (!enteredSixDigitPassword)
+            {
+                var passwordNumber = Log.ReadNumber("Enter the 6-digit password", -1);
+
+                if (passwordNumber >= 0 && passwordNumber <= 999999)
+                {
+                    enteredSixDigitPassword = true;
+                    password = passwordNumber.ToString("000000");
+                }
+                else
+                {
+                    Log.Error("The number must be between 0 and 999999");
+                }
+            }
+
+            return password;
+        }
+
+        /// <summary>
+        /// Dumps the state of the relays.
+        /// </summary>
+        /// <param name="relayBoard">The relay board.</param>
         static private void DumpRelaysState(RelayController relayBoard)
         {
             //return;
@@ -104,6 +161,9 @@ namespace Unosquare.TinySine.RelayModule.Sample
 
         #region Action Options
 
+        /// <summary>
+        /// The action options
+        /// </summary>
         static private readonly Dictionary<ConsoleKey, string> ActionOptions = new Dictionary<ConsoleKey, string>
         {
             // Module COntrol Items
@@ -111,6 +171,7 @@ namespace Unosquare.TinySine.RelayModule.Sample
             { ConsoleKey.W, "MODULE   - Show Relays States" },
             { ConsoleKey.E, "MODULE   - Change Relay Operating Mode" },
             { ConsoleKey.R, "MODULE   - Show Voltage and Temperature" },
+            { ConsoleKey.T, "MODULE   - Change Password" },
 
             { ConsoleKey.A, "RELAYS   - Set All Relays to High" },
             { ConsoleKey.S, "RELAYS   - Set All Relays to Low" },
