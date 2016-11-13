@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Unosquare.TinySine.RelayModule")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("TinySine USB/Wireless Relay Module TOSR1x - Interfacing Library for .NET")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Unosquare")]
 [assembly: AssemblyProduct("Unosquare.TinySine.RelayModule")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]

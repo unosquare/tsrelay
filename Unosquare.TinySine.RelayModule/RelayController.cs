@@ -6,6 +6,7 @@
 
     /// <summary>
     /// Represents a TinySine TOSR1 Relay Controller providing up to 8 relay channels
+    /// Product Page: http://www.tinyosshop.com/index.php?route=product/product&path=141_142&product_id=947
     /// Reference: http://www.tinyosshop.com/datasheet/TOSR14x%20User%20Manual.pdf
     /// </summary>
     /// <seealso cref="System.IDisposable" />

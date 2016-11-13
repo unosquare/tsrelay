@@ -36,6 +36,7 @@
         private SerialPort SerialPort;
         private bool IsDisposing;
         private static readonly ManualResetEventSlim SerialPortDone = new ManualResetEventSlim(true);
+        private static bool IsInDebugMode = System.Diagnostics.Debugger.IsAttached;
 
         #endregion
 
@@ -291,8 +292,12 @@
                         if (expectedBytes <= 0 && response.Count > 0)
                             break;
 
-                        Log.Error($"RX: Did not receive enough bytes. Received: {response.Count}  Expected: {expectedBytes}");
-                        Log.Error($"RX: {BitConverter.ToString(response.ToArray()).Replace("-", " ")}");
+                        if (IsInDebugMode)
+                        {
+                            Log.Error($"RX: Did not receive enough bytes. Received: {response.Count}  Expected: {expectedBytes}");
+                            Log.Error($"RX: {BitConverter.ToString(response.ToArray()).Replace("-", " ")}");
+                        }
+
                         return null;
                     }
 
