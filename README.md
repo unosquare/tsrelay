@@ -1,3 +1,5 @@
+[![Analytics](https://ga-beacon.appspot.com/UA-8535255-2/unosquare/tsrelay/)](https://github.com/igrigorik/ga-beacon)
+
 # TinySine USB/Wireless Relay Module TOSR1x - Interfacing Library for .NET
 
 * Wiki: http://www.waveshare.com/wiki/UART_Fingerprint_Reader
