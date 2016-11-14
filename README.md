@@ -11,9 +11,8 @@
 * Nice sample application included for testing
 * MIT License
 
-## ~~NuGet Installation:~~
+## NuGet Installation [![NuGet version](https://badge.fury.io/nu/Unosquare.TinySine.RelayModule.svg)](https://badge.fury.io/nu/Unosquare.TinySine.RelayModule)
 
-Note: Not yet published.
 ```
 PM> Install-Package Unosquare.TinySine.RelayModule
 ```

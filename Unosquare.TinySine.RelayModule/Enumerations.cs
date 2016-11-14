@@ -5,7 +5,13 @@
     /// </summary>
     public enum RelayOperatingMode : byte
     {
+        /// <summary>
+        /// The latching mode
+        /// </summary>
         Latching = 0x41,
+        /// <summary>
+        /// The momentary mode
+        /// </summary>
         Momentary = 0x42,
     }
 
@@ -25,7 +31,7 @@
     }
 
     /// <summary>
-    /// Enumerates all operation codes (commands) of the borad
+    /// Enumerates all operation codes (commands) of the board
     /// </summary>
     internal enum OperationCode : byte
     {

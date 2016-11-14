@@ -118,7 +118,7 @@
         /// <param name="portName">Name of the port.</param>
         /// <param name="sixDigitPassword">The six digit password.</param>
         /// <exception cref="System.InvalidOperationException">Close</exception>
-        /// <exception cref="System.Security.SecurityException">Invalid password or failed syncrhonization.</exception>
+        /// <exception cref="System.Security.SecurityException">Invalid password or failed synchronization.</exception>
         /// <exception cref="InvalidOperationException">Device is already open. Call the Close method first.</exception>
         public void Open(string portName, string sixDigitPassword = DefaultPassword)
         {
