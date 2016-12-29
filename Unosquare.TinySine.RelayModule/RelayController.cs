@@ -17,9 +17,11 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="RelayController"/> class.
         /// </summary>
-        public RelayController()
+        public RelayController(Action<string> trace = null, Action<string> error = null)
         {
             Uninitialize();
+            Trace = trace;
+            Error = error;
         }
 
         #endregion
@@ -72,6 +74,14 @@
 
             return result;
         }
+
+        #endregion
+
+        #region Properties
+
+        public Action<string> Trace { get; }
+
+        public Action<string> Error { get; }
 
         #endregion
 

@@ -375,34 +375,32 @@
         }
 
         /// <summary>
-        /// Synchronizes the communication between the serail port and the relay board.
+        /// Synchronizes the communication between the serial port and the relay board.
         /// </summary>
         /// <returns></returns>
         private bool SynchronizeCommunication()
         {
-            Log.Trace($"Synchronizing relay board communication . . .");
+            Trace?.Invoke($"Synchronizing relay board communication . . .");
             var iteration = 0;
+
             while (true)
             {
                 var verifyResult = VerifyPassword();
                 if (verifyResult.HasValue)
                 {
-                    Log.Trace($"Relay board communication synchronized.");
+                    Trace?.Invoke($"Relay board communication synchronized.");
                     return verifyResult.Value;
                 }
-
-
+                
                 Thread.Sleep(10);
                 iteration++;
 
                 if (iteration >= 10)
                 {
-                    Log.Error("Failed to synchronize relay board communication.");
+                    Error?.Invoke("Failed to synchronize relay board communication.");
                     return false;
                 }
-
             }
-
         }
 
         #endregion

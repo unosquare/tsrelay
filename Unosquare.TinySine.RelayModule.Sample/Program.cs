@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using Swan;
 
     /// <summary>
     /// This program is a simple console test that  
@@ -14,31 +15,34 @@
         /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
-            using (var relayBoard = new RelayController())
+            using (var relayBoard = new RelayController((s) => Terminal.Trace(s), (e) => Terminal.Error(e)))
             {
                 var isOpen = false;
                 var password = RelayController.DefaultPassword;
+                var serialPort = "COM6";
 
                 while (isOpen == false)
                 {
                     try
                     {
-                        relayBoard.Open("COM4", password);
+                        $"Opening port {serialPort}".Info();
+
+                        relayBoard.Open(serialPort, password);
                         isOpen = true;
                     }
                     catch (Exception ex)
                     {
-                        Log.Error(ex.Message);
+                        ex.Log();
                         password = PromptForPassword();
                     }
                 }
 
                 while (true)
                 {
-                    var selectedOption = Log.ReadPrompt("Select an option", ActionOptions, "Exit this program");
+                    var selectedOption = Terminal.ReadPrompt("Select an option", ActionOptions, "Exit this program");
                     if (selectedOption.Key == ConsoleKey.Q)
                     {
-                        Log.Info($"Board: Model: {relayBoard.BoardModel}, Version: {relayBoard.BoardVersion}, FW: {relayBoard.FirmwareVersion}, Channels: {relayBoard.RelayChannelCount}, Mode: {relayBoard.RelayOperatingMode}");
+                        $"Board: Model: {relayBoard.BoardModel}, Version: {relayBoard.BoardVersion}, FW: {relayBoard.FirmwareVersion}, Channels: {relayBoard.RelayChannelCount}, Mode: {relayBoard.RelayOperatingMode}".Info();
                     }
                     else if (selectedOption.Key == ConsoleKey.W)
                     {
@@ -46,7 +50,7 @@
                     }
                     else if (selectedOption.Key == ConsoleKey.E)
                     {
-                        var newOpModeKey = Log.ReadKey("Enter Operating Mode (L for Latching, anything else, Momentary): ", false);
+                        var newOpModeKey = "Enter Operating Mode (L for Latching, anything else, Momentary): ".ReadKey(false);
                         if (newOpModeKey.Key == ConsoleKey.L)
                         {
                             relayBoard.RelayOperatingMode = RelayOperatingMode.Latching;
@@ -56,12 +60,12 @@
                             relayBoard.RelayOperatingMode = RelayOperatingMode.Momentary;
                         }
 
-                        Log.Info($"Relay Operating Mode is now: {relayBoard.RelayOperatingMode}");
+                        $"Relay Operating Mode is now: {relayBoard.RelayOperatingMode}".Info();
                     }
                     else if (selectedOption.Key == ConsoleKey.R)
                     {
-                        Log.Info($"Relay Board Working Voltage: {relayBoard.WorkingVoltage}");
-                        Log.Info($"Relay Board Temperature    : {relayBoard.Temperature}");
+                        $"Relay Board Working Voltage: {relayBoard.WorkingVoltage}".Info();
+                        $"Relay Board Temperature    : {relayBoard.Temperature}".Info();
                     }
                     else if (selectedOption.Key == ConsoleKey.T)
                     {
@@ -77,26 +81,26 @@
                     }
                     else if (selectedOption.Key == ConsoleKey.D)
                     {
-                        var relayNumber = (RelayNumber)Log.ReadNumber("Enter a relay number from 1 to 8", 1);
+                        var relayNumber = (RelayNumber)"Enter a relay number from 1 to 8".ReadNumber(1);
                         if ((int)relayNumber >= 1 && (int)relayNumber <= 8)
                         {
                             relayBoard[relayNumber] = true;
                         }
                         else
                         {
-                            Log.Error("Bad relay number. Argument must be between 1 and 8");
+                            "Bad relay number. Argument must be between 1 and 8".Error();
                         }
                     }
                     else if (selectedOption.Key == ConsoleKey.F)
                     {
-                        var relayNumber = (RelayNumber)Log.ReadNumber("Enter a relay number from 1 to 8", 1);
+                        var relayNumber = (RelayNumber)"Enter a relay number from 1 to 8".ReadNumber(1);
                         if ((int)relayNumber >= 1 && (int)relayNumber <= 8)
                         {
                             relayBoard[relayNumber] = false;
                         }
                         else
                         {
-                            Log.Error("Bad relay number. Argument must be between 1 and 8");
+                            "Bad relay number. Argument must be between 1 and 8".Error();
                         }
                     }
                     else
@@ -107,7 +111,7 @@
 
             }
 
-            Log.ReadKey("Press any key to continue . . .", true);
+            "Press any key to continue . . .".ReadKey(true);
         }
 
         /// <summary>
@@ -121,7 +125,7 @@
 
             while (!enteredSixDigitPassword)
             {
-                var passwordNumber = Log.ReadNumber("Enter the 6-digit password", -1);
+                var passwordNumber = "Enter the 6-digit password".ReadNumber(-1);
 
                 if (passwordNumber >= 0 && passwordNumber <= 999999)
                 {
@@ -130,7 +134,7 @@
                 }
                 else
                 {
-                    Log.Error("The number must be between 0 and 999999");
+                    "The number must be between 0 and 999999".Error();
                 }
             }
 
@@ -143,12 +147,11 @@
         /// <param name="relayBoard">The relay board.</param>
         static private void DumpRelaysState(RelayController relayBoard)
         {
-            //return;
             var states = relayBoard.GetRelaysStateDictionary();
 
-            Log.Info("STATUS DUMP");
-            Log.Info($"RELAY:     \t8\t7\t6\t5\t4\t3\t2\t1");
-            Log.Info($"STATE:     \t" + 
+            "STATUS DUMP".Info();
+            "RELAY:     \t8\t7\t6\t5\t4\t3\t2\t1".Info();
+            ($"STATE:     \t" +
                 $"{(states[RelayNumber.Relay08] ? 1 : 0)}\t" +
                 $"{(states[RelayNumber.Relay07] ? 1 : 0)}\t" +
                 $"{(states[RelayNumber.Relay06] ? 1 : 0)}\t" +
@@ -156,7 +159,7 @@
                 $"{(states[RelayNumber.Relay04] ? 1 : 0)}\t" +
                 $"{(states[RelayNumber.Relay03] ? 1 : 0)}\t" +
                 $"{(states[RelayNumber.Relay02] ? 1 : 0)}\t" +
-                $"{(states[RelayNumber.Relay01] ? 1 : 0)}\t");
+                $"{(states[RelayNumber.Relay01] ? 1 : 0)}\t").Info();
         }
 
         #region Action Options

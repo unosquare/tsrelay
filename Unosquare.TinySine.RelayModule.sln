@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unosquare.TinySine.RelayMod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unosquare.TinySine.RelayModule.Sample", "Unosquare.TinySine.RelayModule.Sample\Unosquare.TinySine.RelayModule.Sample.csproj", "{0C333BB9-242F-486D-BDDB-528C17F8EAB3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution folder", "Solution folder", "{BC6F3784-2187-440D-A98B-4A96F5D0D40C}"
+	ProjectSection(SolutionItems) = preProject
+		sshdeploy.cmd = sshdeploy.cmd
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

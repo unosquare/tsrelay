@@ -2,7 +2,6 @@
 
 # TinySine USB/Wireless Relay Module TOSR1x - Interfacing Library for .NET
 
-* Wiki: http://www.waveshare.com/wiki/UART_Fingerprint_Reader
 * Product Page: http://www.tinyosshop.com/index.php?route=product/product&path=141_142&product_id=947
 
 ## Features

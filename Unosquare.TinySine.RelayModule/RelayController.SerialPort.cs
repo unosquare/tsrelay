@@ -10,7 +10,6 @@
 
     partial class RelayController
     {
-
         #region Private Declarations
 
         /// <summary>
@@ -128,11 +127,13 @@
             try
             {
                 SerialPort = new SerialPort(portName, DefaultBaudRate, Parity.None, 8, StopBits.One);
+                
                 SerialPort.ReadBufferSize = ReadBufferLength;
                 SerialPort.Open();
                 Password = sixDigitPassword;
+
                 if (SynchronizeCommunication() == false)
-                    throw new SecurityException("Invalid password or failed syncrhonization.");
+                    throw new SecurityException("Invalid password or failed synchronization.");
 
                 Initialize();
             }
@@ -301,8 +302,8 @@
 
                         if (IsDebugBuild)
                         {
-                            Log.Error($"RX: Did not receive enough bytes. Received: {response.Count}  Expected: {expectedBytes}");
-                            Log.Error($"RX: {BitConverter.ToString(response.ToArray()).Replace("-", " ")}");
+                            Error?.Invoke($"RX: Did not receive enough bytes. Received: {response.Count}  Expected: {expectedBytes}");
+                            Error?.Invoke($"RX: {BitConverter.ToString(response.ToArray()).Replace("-", " ")}");
                         }
 
                         return null;
@@ -322,8 +323,6 @@
             {
                 SerialPortDone.Set();
             }
-
-
         }
 
         /// <summary>
