@@ -1,4 +1,0 @@
-language: csharp
-solution: Unosquare.TinySine.RelayModule.sln
-notifications:
-  slack: unolabs:cbusXPH6pBwZ35rVDzi4k4ve
