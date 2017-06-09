@@ -9,7 +9,7 @@
     /// Product Page: http://www.tinyosshop.com/index.php?route=product/product&path=141_142&product_id=947
     /// Reference: http://www.tinyosshop.com/datasheet/TOSR14x%20User%20Manual.pdf
     /// </summary>
-    /// <seealso cref="System.IDisposable" />
+    /// <seealso cref="IDisposable" />
     public partial class RelayController : IDisposable
     {
         #region Constructor
@@ -79,8 +79,14 @@
 
         #region Properties
 
+        /// <summary>
+        /// Gets the trace action.
+        /// </summary>
         public Action<string> Trace { get; }
 
+        /// <summary>
+        /// Gets the error action.
+        /// </summary>
         public Action<string> Error { get; }
 
         #endregion
@@ -132,11 +138,11 @@
         /// <summary>
         /// Gets the working voltage.
         /// </summary>
-        public byte WorkingVoltage { get { return GetWorkingVoltage(); } }
+        public byte WorkingVoltage => GetWorkingVoltage();
 
         /// <summary>
         /// Gets or sets the relay operating mode.
-        /// Wehn setting the operating mode the relays are reset by setting all highs and then setting all lows.
+        /// When setting the operating mode the relays are reset by setting all highs and then setting all lows.
         /// </summary>
         public RelayOperatingMode RelayOperatingMode
         {

@@ -1,0 +1,29 @@
+{
+  "version": "1.1.0-*",
+  "title": "Unosquare.TinySine.RelayModule.Sample",
+  "buildOptions": { "emitEntryPoint": true },
+  "dependencies": {
+    "Unosquare.TinySine.RelayModule": { "target": "project" },
+    "Unosquare.Swan": "0.14.3"
+  },
+  "frameworks": {
+    "netcoreapp1.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.1.0",
+          "type": "platform"
+        },
+        "System.ComponentModel.Primitives": {
+          "version": "4.3.0",
+          "exclude": "runtime"
+        }
+      }
+    },
+    "net452": {
+    
+    }
+  },
+  "runtimes": {
+    "win8-x64": ""
+  }
+}

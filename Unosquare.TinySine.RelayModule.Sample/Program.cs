@@ -15,7 +15,7 @@
         /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
-            using (var relayBoard = new RelayController((s) => Terminal.Trace(s), (e) => Terminal.Error(e)))
+            using (var relayBoard = new RelayController((s) => s.Trace(), (e) => e.Error()))
             {
                 var isOpen = false;
                 var password = RelayController.DefaultPassword;
@@ -32,14 +32,14 @@
                     }
                     catch (Exception ex)
                     {
-                        ex.Log();
+                        ex.Log(nameof(Main));
                         password = PromptForPassword();
                     }
                 }
 
                 while (true)
                 {
-                    var selectedOption = Terminal.ReadPrompt("Select an option", ActionOptions, "Exit this program");
+                    var selectedOption = "Select an option".ReadPrompt(ActionOptions, "Exit this program");
                     if (selectedOption.Key == ConsoleKey.Q)
                     {
                         $"Board: Model: {relayBoard.BoardModel}, Version: {relayBoard.BoardVersion}, FW: {relayBoard.FirmwareVersion}, Channels: {relayBoard.RelayChannelCount}, Mode: {relayBoard.RelayOperatingMode}".Info();
@@ -118,7 +118,7 @@
         /// Prompts for password.
         /// </summary>
         /// <returns></returns>
-        static private string PromptForPassword()
+        private static string PromptForPassword()
         {
             var enteredSixDigitPassword = false;
             var password = string.Empty;
@@ -145,7 +145,7 @@
         /// Dumps the state of the relays.
         /// </summary>
         /// <param name="relayBoard">The relay board.</param>
-        static private void DumpRelaysState(RelayController relayBoard)
+        private static void DumpRelaysState(RelayController relayBoard)
         {
             var states = relayBoard.GetRelaysStateDictionary();
 
@@ -167,7 +167,7 @@
         /// <summary>
         /// The action options
         /// </summary>
-        static private readonly Dictionary<ConsoleKey, string> ActionOptions = new Dictionary<ConsoleKey, string>
+        private static readonly Dictionary<ConsoleKey, string> ActionOptions = new Dictionary<ConsoleKey, string>
         {
             // Module COntrol Items
             { ConsoleKey.Q, "MODULE   - Show Board Info" },
