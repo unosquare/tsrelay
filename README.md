@@ -40,7 +40,7 @@ This example use the Sample project
 You need to have:
 
 - [.NET Core SDK](https://www.microsoft.com/net/core#windowscmd) installed in your machine.
-- [Visual Studio 2017](https://www.visualstudio.com/es/)
+- [Visual Studio 2017](https://www.visualstudio.com)
 - [Ubuntu Classic Server 16.04](https://ubuntu-pi-flavour-maker.org/download/) for Raspberry PI 3.
 - [7zip](http://www.7-zip.org/)
 - [Win32DiskImage](https://sourceforge.net/projects/win32diskimager/)
@@ -53,6 +53,7 @@ If you already have installed all you need:
 - Extract and Write Ubuntu Classic Server into your SD Card
 - Plugin your SD Card into your Raspberry and start it
     - It's going to ask you for login and password, the defaults are ubuntu/ubuntu
+- Install the  [Wiring Pi](http://wiringpi.com/download-and-install/) dependency (Needed it to access the serial port).
 
 #### Installing .NET Core
 
@@ -130,7 +131,7 @@ Once you have all you need:
 
 ### Running the project
 
-Once you have published the project you need to pass the publish folder to the Raspberry Pi, you can use ssh or an usb to do that, and also if you want, you can rename the folder. we just pass the publish folder.
+Once you have published the project you need to pass the publish folder to the Raspberry Pi, you can use ssh or an usb to do that, and if you want, you can rename the folder. We just pass the publish folder.
 
 In the Raspberry, you need to do:
 
@@ -148,10 +149,6 @@ In the Raspberry, you need to do:
     ```
     ubuntu@ubuntu:~/publish$ ./Unosquare.TinySine.RelayModule.Sample
     ```
-
-NOTE: 
-
-Some libraries might be missing, you just need to download it and add it to the publish folder.
 
 ## Missing Stuff
 * Some more testing is needed
