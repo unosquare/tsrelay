@@ -1,13 +1,16 @@
-﻿namespace Unosquare.TinySine.RelayModule
+﻿using System.Text;
+using System.Threading;
+#if NET452
+using System.Globalization;
+#endif
+
+namespace Unosquare.TinySine.RelayModule
 {
     using System;
-    using System.Globalization;
-    using System.Text;
-    using System.Threading;
 
     partial class RelayController
     {
-        #region Command Methods
+#region Command Methods
 
         /// <summary>
         /// Gets the board model.
@@ -63,17 +66,19 @@
 
             if (response == null)
             {
-                if (SynchronizeCommunication())
-                    return GetPassword();
-                else
-                    return DefaultPassword;
+                return SynchronizeCommunication() ? GetPassword() : DefaultPassword;
             }
 
             var encodedPassword = new byte[] { response[0], response[1], response[2], 0 };
             if (BitConverter.IsLittleEndian == false)
                 Array.Reverse(encodedPassword);
 
-            return BitConverter.ToUInt32(encodedPassword, 0).ToString(CultureInfo.InvariantCulture);
+            return BitConverter.ToUInt32(encodedPassword, 0)
+#if NET452
+                .ToString(CultureInfo.InvariantCulture);
+#else
+                .ToString();
+#endif
         }
 
         /// <summary>
@@ -88,7 +93,7 @@
             Write(payload);
             var response = Read(DefaultTimeout, 1);
             if (response == null) return null;
-            var result = response[0] == 0 ? false : true;
+            var result = response[0] != 0;
             return result;
         }
 
@@ -108,11 +113,11 @@
             {
                 if (SynchronizeCommunication())
                     return SetPassword(sixDigitPassword);
-                else
-                    return default(bool);
+
+                return default(bool);
             }
 
-            var result = response[0] == 0 ? false : true;
+            var result = response[0] != 0;
             return result;
         }
 
@@ -306,8 +311,8 @@
             {
                 if (SynchronizeCommunication())
                     return GetTemperature();
-                else
-                    return default(decimal);
+
+                return default(decimal);
             }
 
             var temperatureStr = Encoding.ASCII.GetString(response).Trim().Replace("\r\n", "");
@@ -380,7 +385,7 @@
         /// <returns></returns>
         private bool SynchronizeCommunication()
         {
-            Trace?.Invoke($"Synchronizing relay board communication . . .");
+            Trace?.Invoke("Synchronizing relay board communication . . .");
             var iteration = 0;
 
             while (true)
@@ -388,7 +393,7 @@
                 var verifyResult = VerifyPassword();
                 if (verifyResult.HasValue)
                 {
-                    Trace?.Invoke($"Relay board communication synchronized.");
+                    Trace?.Invoke("Relay board communication synchronized.");
                     return verifyResult.Value;
                 }
                 
@@ -403,6 +408,6 @@
             }
         }
 
-        #endregion
+#endregion
     }
 }

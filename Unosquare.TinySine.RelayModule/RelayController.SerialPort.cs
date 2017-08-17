@@ -2,11 +2,15 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.IO.Ports;
     using System.Linq;
     using System.Security;
     using System.Threading;
     using System.Threading.Tasks;
+#if NET452
+    using System.IO.Ports;
+#else
+    using Unosquare.IO.Ports;
+#endif
 
     partial class RelayController
     {
@@ -308,7 +312,6 @@
 
                         return null;
                     }
-
                 }
 
                 var responseBytes = response.ToArray();

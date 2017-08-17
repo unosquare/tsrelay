@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution folder", "Solution folder", "{BC6F3784-2187-440D-A98B-4A96F5D0D40C}"
+	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
+		appveyor.yml = appveyor.yml
+		docfx.json = docfx.json
+		README.md = README.md
+		sshdeploy.cmd = sshdeploy.cmd
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unosquare.TinySine.RelayModule", "Unosquare.TinySine.RelayModule\Unosquare.TinySine.RelayModule.csproj", "{23CFFB12-316C-4342-9735-AD0E9B76C4FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Unosquare.TinySine.RelayModule.Sample", "Unosquare.TinySine.RelayModule.Sample\Unosquare.TinySine.RelayModule.Sample.csproj", "{81F31F77-8C4E-4CD5-98DC-36F4C8D9698A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23CFFB12-316C-4342-9735-AD0E9B76C4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23CFFB12-316C-4342-9735-AD0E9B76C4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23CFFB12-316C-4342-9735-AD0E9B76C4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23CFFB12-316C-4342-9735-AD0E9B76C4FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81F31F77-8C4E-4CD5-98DC-36F4C8D9698A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F31F77-8C4E-4CD5-98DC-36F4C8D9698A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F31F77-8C4E-4CD5-98DC-36F4C8D9698A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F31F77-8C4E-4CD5-98DC-36F4C8D9698A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1EF21D5-8189-4811-8402-28BD5F553377}
+	EndGlobalSection
+EndGlobal
