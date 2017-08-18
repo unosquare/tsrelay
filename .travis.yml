@@ -1,4 +1,8 @@
 language: csharp
-solution: Unosquare.TinySine.RelayModule.sln
+dotnet: 2.0.0
 notifications:
   slack: unolabs:cbusXPH6pBwZ35rVDzi4k4ve
+install:
+  - dotnet restore
+script:
+  - msbuild
