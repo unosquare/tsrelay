@@ -1,1 +1,191 @@
-{"homepages":[],"source_base_path":"C:/projects/tsrelay","xrefmap":"xrefmap.yml","files":[{"type":"ManagedReference","source_relative_path":"obj/api/Unosquare.TinySine.RelayModule.RelayController.yml","output":{".html":{"relative_path":"api/Unosquare.TinySine.RelayModule.RelayController.html","hash":"GG8cuDZbCAHfDwBEic2e4w=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Unosquare.TinySine.RelayModule.yml","output":{".html":{"relative_path":"api/Unosquare.TinySine.RelayModule.html","hash":"AOFSqPzSypUn5mm4zDu/RQ=="}},"is_incremental":false,"version":""},{"type":"Toc","source_relative_path":"toc.yml","output":{".html":{"relative_path":"toc.html","hash":"lIcyx/2YX6x1T12tFL9MyQ=="}},"is_incremental":false,"version":""},{"type":"Toc","source_relative_path":"obj/api/toc.yml","output":{".html":{"relative_path":"api/toc.html","hash":"tS55pNDmBsGrV9lhYiag+Q=="}},"is_incremental":false,"version":""},{"type":"Conceptual","source_relative_path":"README.md","output":{".html":{"relative_path":"README.html","hash":"9JBCovmGRggVuI0mQoE4FQ=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Unosquare.TinySine.RelayModule.RelayOperatingMode.yml","output":{".html":{"relative_path":"api/Unosquare.TinySine.RelayModule.RelayOperatingMode.html","hash":"y+7VIBPOnyczOyP+s+Bpfw=="}},"is_incremental":false,"version":""},{"type":"ManagedReference","source_relative_path":"obj/api/Unosquare.TinySine.RelayModule.RelayNumber.yml","output":{".html":{"relative_path":"api/Unosquare.TinySine.RelayModule.RelayNumber.html","hash":"SUXOQLqVQYV6V3ELSTF1kQ=="}},"is_incremental":false,"version":""},{"type":"Resource","output":{"resource":{"relative_path":"index.json"}},"is_incremental":false}],"version_info":{}}
+{
+  "homepages": [],
+  "source_base_path": "C:/projects/tsrelay",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "ob1zm+CJnCOJA9pU2cQJEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.IO.Ports.Parity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.IO.Ports.Parity.html",
+          "hash": "x1NewcSIRQJuJgySS3Zk0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.IO.Ports.SerialPort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.IO.Ports.SerialPort.html",
+          "hash": "ByGnQTXb+f7whehN1VyO9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.IO.Ports.StopBits.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.IO.Ports.StopBits.html",
+          "hash": "77ddw8+nWtzu6k24WvtlCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.IO.Ports.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.IO.Ports.html",
+          "hash": "EQ08E25mvQLCDvixYd7VyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.TinySine.RelayModule.RelayController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.TinySine.RelayModule.RelayController.html",
+          "hash": "7l6lylsoN3d+ORj9N5Yrgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.TinySine.RelayModule.RelayNumber.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.TinySine.RelayModule.RelayNumber.html",
+          "hash": "D5MvtSohmPhS4aSq5YWoQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.TinySine.RelayModule.RelayOperatingMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.TinySine.RelayModule.RelayOperatingMode.html",
+          "hash": "mFn3IiDPTO86PypBnDCO9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Unosquare.TinySine.RelayModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Unosquare.TinySine.RelayModule.html",
+          "hash": "egFljFrXiyuhN2oxqs74Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "4/LT6KVgI1gNYOT1PE8Wlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "KhyEmGCcV9oDT2XPsW/RVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {}
+}

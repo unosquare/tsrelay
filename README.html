@@ -8,7 +8,7 @@
     <title>TinySine USB/Wireless Relay Module TOSR1x - Interfacing Library for .NET | TinySine Relay Module </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="TinySine USB/Wireless Relay Module TOSR1x - Interfacing Library for .NET | TinySine Relay Module ">
-    <meta name="generator" content="docfx 2.18.5.0">
+    <meta name="generator" content="docfx 2.22.3.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -93,7 +93,103 @@
     Console.WriteLine($&quot;Board: Model: {controller.BoardModel}, Version: {controller.BoardVersion}, FW: {controller.FirmwareVersion}, Channels: {controller.RelayChannelCount}, Mode: {controller.RelayOperatingMode}&quot;);
     controller.SetRelayStateAll(false);
 }
-</code></pre><h2 id="missing-stuff">Missing Stuff</h2>
+</code></pre><h2 id="net-core-2-for-raspberry-pi-3">.NET Core 2 for Raspberry Pi 3</h2>
+<p>Implementing .NET Core 2 in your projects running on <a href="https://ubuntu-pi-flavour-maker.org/download/">Ubuntu Classic Server 16.04</a> for Raspberry PI 3.</p>
+<p>This example use the Sample project</p>
+<p>You need to have:</p>
+<ul>
+<li><a href="https://www.microsoft.com/net/core#windowscmd">.NET Core SDK</a> installed in your machine.</li>
+<li><a href="https://www.visualstudio.com">Visual Studio 2017</a></li>
+<li><a href="https://ubuntu-pi-flavour-maker.org/download/">Ubuntu Classic Server 16.04</a> for Raspberry PI 3.</li>
+<li><a href="http://www.7-zip.org/">7zip</a></li>
+<li><a href="https://sourceforge.net/projects/win32diskimager/">Win32DiskImage</a></li>
+<li>Highly recommend that you use a Class 6 or Class 10 microSD HC card.</li>
+</ul>
+<h3 id="configuring-ubuntu-on-the-raspberry">Configuring Ubuntu on the Raspberry</h3>
+<p>If you already have installed all you need:</p>
+<ul>
+<li>Extract and Write Ubuntu Classic Server into your SD Card</li>
+<li>Plugin your SD Card into your Raspberry and start it<ul>
+<li>It&#39;s going to ask you for login and password, the defaults are ubuntu/ubuntu</li>
+</ul>
+</li>
+<li>Install the  <a href="http://wiringpi.com/download-and-install/">Wiring Pi</a> dependency (Needed it to access the serial port).</li>
+</ul>
+<h4 id="installing-net-core">Installing .NET Core</h4>
+<p>Run the fallowing commands in your Raspberry Pi</p>
+<pre><code># Update Ubuntu 16.04
+sudo apt-get -y update
+
+# Install the packages necessary for .NET Core
+sudo apt-get -y install libunwind8 libunwind8-dev gettext libicu-dev liblttng-ust-dev libcurl4-openssl-dev libssl-dev uuid-dev
+
+# Download the latest binaries for .NET Core 2 
+wget https://dotnetcli.blob.core.windows.net/dotnet/Runtime/release/2.0.0/dotnet-runtime-latest-linux-arm.tar.gz
+
+# Make a directory for .NET Core to live in
+mkdir /home/ubuntu/dotnet
+
+# Unzip the binaries into the directory you just created
+tar -xvf dotnet-runtime-latest-linux-arm.tar.gz -C /home/ubuntu/dotnet
+
+# Now add the path to the dotnet executable to the environment path
+# This ensures the next time you log in, the dotnet exe is on your path
+echo &quot;PATH=\$PATH:/home/ubuntu/dotnet&quot; &gt;&gt; dotnetcore.sh
+sudo mv dotnetcore.sh /etc/profile.d
+
+# Then run the command below to add the path to the dotnet executable to the current session
+PATH=$PATH:/home/ubuntu/dotnet
+</code></pre><p>After that you can reboot the raspberry. To check if dotnet is installed just run &quot;dotnet&quot; and a message should show.</p>
+<pre><code>ubuntu@ubuntu:~$ dotnet
+
+Usage: dotnet [options]
+Usage: dotnet [path-to-application]
+
+Options:
+  -h|--help            Display help.
+  --version         Display version.
+
+path-to-application:
+  The path to an application .dll file to execute.
+</code></pre><h3 id="configuring-windows-and-visual-studio-2017">Configuring Windows and Visual Studio 2017</h3>
+<p>Once you have all you need:</p>
+<ul>
+<li>Open the Sample Project</li>
+<li>You need to edit your csproj to run .NET Core 2, you need to check if the <code>TargetFramework</code> is correct
+  <code>xml
+  &lt;PropertyGroup&gt;
+      &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+      &lt;AssemblyTitle&gt;Unosquare.TinySine.RelayModule.Sample&lt;/AssemblyTitle&gt;
+      &lt;AssemblyName&gt;Unosquare.TinySine.RelayModule.Sample&lt;/AssemblyName&gt;
+      &lt;PackageId&gt;Unosquare.TinySine.RelayModule.Sample&lt;/PackageId&gt;
+      &lt;TargetFramework&gt;netcoreapp2.0&lt;/TargetFramework&gt;
+  &lt;/PropertyGroup&gt;</code></li>
+<li>Rebuild the Sample project</li>
+<li>Open the Package Manager Console</li>
+<li>Type
+  <code>// If you have more than one project, you need to specify the project to restore the packages
+  PM&gt; dotnet restore .\Unosquare.TinySine.RelayModule.Sample</code>
+  <code>// If you have more than one project, you need to specify the project to publish the packages
+  PM&gt; dotnet publish -r ubuntu.16.04-arm .\Unosquare.TinySine.RelayModule.Sample</code></li>
+<li>Find the publish files, usually located in <ul>
+<li>C:\~\Unosquare.TinySine.RelayModule.Sample\bin\Debug\netcoreapp2.0\ubuntu.16.04-arm\publish</li>
+</ul>
+</li>
+</ul>
+<h3 id="running-the-project">Running the project</h3>
+<p>Once you have published the project you need to pass the publish folder to the Raspberry Pi, you can use ssh or an usb to do that, and if you want, you can rename the folder. We just pass the publish folder.</p>
+<p>In the Raspberry, you need to do:</p>
+<ul>
+<li><p>Navigate to the projects folder</p>
+<pre><code>ubuntu@ubuntu:~$ cd publish
+ubuntu@ubuntu:~/publish$
+</code></pre></li>
+<li>Give permissions to run the project
+  <code>ubuntu@ubuntu:~/publish$ sudo chmod u+x *</code></li>
+<li>Run the project
+  <code>ubuntu@ubuntu:~/publish$ ./Unosquare.TinySine.RelayModule.Sample</code></li>
+</ul>
+<h2 id="missing-stuff">Missing Stuff</h2>
 <ul>
 <li>Some more testing is needed</li>
 </ul>
