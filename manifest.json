@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "ob1zm+CJnCOJA9pU2cQJEA=="
+          "hash": "0R9Ajajk3p+QWSBYFBBMwg=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.Parity.html",
-          "hash": "x1NewcSIRQJuJgySS3Zk0g=="
+          "hash": "Xuv8hxv85l9yBBcPaV4YPg=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.SerialPort.html",
-          "hash": "ByGnQTXb+f7whehN1VyO9g=="
+          "hash": "mDGXpsu9FeosdQMVWRiftQ=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.StopBits.html",
-          "hash": "77ddw8+nWtzu6k24WvtlCw=="
+          "hash": "sm2E1If925Ysua4kRgk5bg=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.html",
-          "hash": "EQ08E25mvQLCDvixYd7VyQ=="
+          "hash": "aA5oNNNyy+Wx6KD0nLVzDg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayController.html",
-          "hash": "7l6lylsoN3d+ORj9N5Yrgw=="
+          "hash": "dzYmpldswAXTB48eTY9O5w=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayNumber.html",
-          "hash": "D5MvtSohmPhS4aSq5YWoQA=="
+          "hash": "E2WhbSeNlTGljWK3vlIeNw=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayOperatingMode.html",
-          "hash": "mFn3IiDPTO86PypBnDCO9Q=="
+          "hash": "p6uoVvRIWtxXKccxUnH6zQ=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.html",
-          "hash": "egFljFrXiyuhN2oxqs74Ag=="
+          "hash": "932iMQTcEZdiVzI6lmglYA=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "4/LT6KVgI1gNYOT1PE8Wlw=="
+          "hash": "wTNA8WGkIoEQ4GNP+B+kYA=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "KhyEmGCcV9oDT2XPsW/RVg=="
+          "hash": "xrM7VJfuolYlCpW+GNtYLA=="
         }
       },
       "is_incremental": false,
@@ -153,11 +153,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
@@ -169,6 +164,11 @@
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {
@@ -187,5 +187,10 @@
       "processors": {}
     }
   ],
-  "version_info": {}
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
 }
