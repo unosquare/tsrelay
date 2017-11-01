@@ -18,7 +18,40 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "0R9Ajajk3p+QWSBYFBBMwg=="
+          "hash": "ryot8LY3zntZvkJp8fegbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "best-practices/resources/images/doc_logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "best-practices/resources/images/doc_logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "best-practices/resources/images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "best-practices/resources/images/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "best-practices/resources/images/transparent.gif",
+      "output": {
+        "resource": {
+          "relative_path": "best-practices/resources/images/transparent.gif"
         }
       },
       "is_incremental": false,
@@ -30,7 +63,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.Parity.html",
-          "hash": "Xuv8hxv85l9yBBcPaV4YPg=="
+          "hash": "olT/lEk3kZNsVsnFwDh/tw=="
         }
       },
       "is_incremental": false,
@@ -42,7 +75,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.SerialPort.html",
-          "hash": "mDGXpsu9FeosdQMVWRiftQ=="
+          "hash": "/EkQO9DxycARnLEnDK5yFg=="
         }
       },
       "is_incremental": false,
@@ -54,7 +87,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.StopBits.html",
-          "hash": "sm2E1If925Ysua4kRgk5bg=="
+          "hash": "C+gPo0O/o7WdsMy8NBSHZg=="
         }
       },
       "is_incremental": false,
@@ -66,7 +99,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.html",
-          "hash": "aA5oNNNyy+Wx6KD0nLVzDg=="
+          "hash": "H2pZgRjMkryiBaOis3mzuw=="
         }
       },
       "is_incremental": false,
@@ -78,7 +111,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayController.html",
-          "hash": "dzYmpldswAXTB48eTY9O5w=="
+          "hash": "cMbVXQLqwHzYh9kfxKEz3w=="
         }
       },
       "is_incremental": false,
@@ -90,7 +123,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayNumber.html",
-          "hash": "E2WhbSeNlTGljWK3vlIeNw=="
+          "hash": "eAUYYdJmJFaWhs+u83aqSw=="
         }
       },
       "is_incremental": false,
@@ -102,7 +135,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayOperatingMode.html",
-          "hash": "p6uoVvRIWtxXKccxUnH6zQ=="
+          "hash": "sDge1tILe+5f7P4Rhx4GqQ=="
         }
       },
       "is_incremental": false,
@@ -114,7 +147,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.html",
-          "hash": "932iMQTcEZdiVzI6lmglYA=="
+          "hash": "xaJ6qdN+DZOkgJ4R7Wg1Sw=="
         }
       },
       "is_incremental": false,
@@ -126,7 +159,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "wTNA8WGkIoEQ4GNP+B+kYA=="
+          "hash": "6Ike1ae2cUlBwzhsgCYURQ=="
         }
       },
       "is_incremental": false,
@@ -138,7 +171,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "xrM7VJfuolYlCpW+GNtYLA=="
+          "hash": "VQf4QDrxTmF61/a+OzukYA=="
         }
       },
       "is_incremental": false,
@@ -148,17 +181,16 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ResourceDocumentProcessor": {
