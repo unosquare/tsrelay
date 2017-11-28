@@ -1,4 +1,4 @@
-[![Analytics](https://ga-beacon.appspot.com/UA-8535255-2/unosquare/tsrelay/)](https://github.com/igrigorik/ga-beacon)
+[![Build status](https://ci.appveyor.com/api/projects/status/8frmfyb5wo751aop/branch/master?svg=true)](https://ci.appveyor.com/project/geoperez/tsrelay/branch/master)[![Analytics](https://ga-beacon.appspot.com/UA-8535255-2/unosquare/tsrelay/)](https://github.com/igrigorik/ga-beacon)
 
 # TinySine USB/Wireless Relay Module TOSR1x - Interfacing Library for .NET
 
