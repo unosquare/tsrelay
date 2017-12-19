@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "GRC19d8zIa8KIAPufPSXJw=="
+          "hash": "StFnSdQHoD/Qjk9cIgeVdw=="
         }
       },
       "is_incremental": false,
@@ -63,7 +63,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.Parity.html",
-          "hash": "vjzZ3/rrGb4nMNyKgexxcA=="
+          "hash": "DDTKAOyIjaM2CBe9Bc/VYw=="
         }
       },
       "is_incremental": false,
@@ -75,7 +75,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.SerialPort.html",
-          "hash": "kPXbOcBmBc4LYQNfBTx6sQ=="
+          "hash": "A22VVBS/dk2q9IyoGKhEbA=="
         }
       },
       "is_incremental": false,
@@ -87,7 +87,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.StopBits.html",
-          "hash": "VxZPM/Ip7vFhzdhVJJvEQg=="
+          "hash": "1yoUXl9PssZsUtU3TCFbQQ=="
         }
       },
       "is_incremental": false,
@@ -99,7 +99,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.html",
-          "hash": "GonIJxUK1SD9UCjQUvenig=="
+          "hash": "1EJPRdmMpUGa9hO2+obJLw=="
         }
       },
       "is_incremental": false,
@@ -111,7 +111,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayController.html",
-          "hash": "JzPOOyTNsf8iMtnzPcVotQ=="
+          "hash": "9RpSpgSh0vrpMKdeZQF9zg=="
         }
       },
       "is_incremental": false,
@@ -123,7 +123,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayNumber.html",
-          "hash": "ScgXhiwB2lCFdr91d1HBZw=="
+          "hash": "McysLRLbgzD+rH7zxDQQWg=="
         }
       },
       "is_incremental": false,
@@ -135,7 +135,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayOperatingMode.html",
-          "hash": "qaHgNgiabAUYI/rBhEbH0Q=="
+          "hash": "6D/Ui1ijtgt7J7jhyY03eg=="
         }
       },
       "is_incremental": false,
@@ -147,7 +147,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.html",
-          "hash": "cGlDfXVaBEnDvSAR+hZSzg=="
+          "hash": "Yy8mHHDCX0hXks3z49yOCg=="
         }
       },
       "is_incremental": false,
@@ -194,13 +194,13 @@
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         }
       }
