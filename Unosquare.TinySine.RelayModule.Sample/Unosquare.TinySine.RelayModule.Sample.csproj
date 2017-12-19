@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Unosquare.Swan" Version="0.14.11" />
+    <PackageReference Include="Unosquare.Swan.Lite" Version="0.24.0" />
   </ItemGroup>
 
 </Project>
