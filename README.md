@@ -35,11 +35,11 @@ using (var controller = new RelayController())
 
 Implementing .NET Core 2 in your projects running on [Ubuntu Classic Server 16.04](https://ubuntu-pi-flavour-maker.org/download/) for Raspberry PI 3.
 
-This example use the Sample project
+This example uses the Sample project
 
 You need to have:
 
-- [.NET Core SDK](https://www.microsoft.com/net/core#windowscmd) installed in your machine.
+- [.NET Core SDK](https://www.microsoft.com/net/core#windowscmd) installed on your machine.
 - [Visual Studio 2017](https://www.visualstudio.com)
 - [Ubuntu Classic Server 16.04](https://ubuntu-pi-flavour-maker.org/download/) for Raspberry PI 3.
 - [7zip](http://www.7-zip.org/)
@@ -84,7 +84,7 @@ sudo mv dotnetcore.sh /etc/profile.d
 PATH=$PATH:/home/ubuntu/dotnet
 ```
 
-After that you can reboot the raspberry. To check if dotnet is installed just run "dotnet" and a message should show.
+After that, you can reboot the raspberry. To check if dotnet is installed just run "dotnet" and a message should show.
 
 ```
 ubuntu@ubuntu:~$ dotnet
@@ -152,5 +152,3 @@ In the Raspberry, you need to do:
 
 ## Missing Stuff
 * Some more testing is needed
-
-
