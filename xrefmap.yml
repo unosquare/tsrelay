@@ -71,6 +71,7 @@ references:
   name: SerialPort
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort__ctor_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.#ctor
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.SerialPort
   nameWithType: SerialPort.SerialPort
 - uid: Unosquare.IO.Ports.SerialPort.BaseStream
@@ -83,6 +84,7 @@ references:
   name: BaseStream
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_BaseStream_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.BaseStream
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.BaseStream
   nameWithType: SerialPort.BaseStream
 - uid: Unosquare.IO.Ports.SerialPort.BaudRate
@@ -95,6 +97,7 @@ references:
   name: BaudRate
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_BaudRate_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.BaudRate
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.BaudRate
   nameWithType: SerialPort.BaudRate
 - uid: Unosquare.IO.Ports.SerialPort.BytesToRead
@@ -107,6 +110,7 @@ references:
   name: BytesToRead
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_BytesToRead_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.BytesToRead
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.BytesToRead
   nameWithType: SerialPort.BytesToRead
 - uid: Unosquare.IO.Ports.SerialPort.BytesToWrite
@@ -119,6 +123,7 @@ references:
   name: BytesToWrite
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_BytesToWrite_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.BytesToWrite
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.BytesToWrite
   nameWithType: SerialPort.BytesToWrite
 - uid: Unosquare.IO.Ports.SerialPort.Close
@@ -131,6 +136,7 @@ references:
   name: Close
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_Close_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.Close
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.Close
   nameWithType: SerialPort.Close
 - uid: Unosquare.IO.Ports.SerialPort.DataBits
@@ -143,6 +149,7 @@ references:
   name: DataBits
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_DataBits_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.DataBits
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.DataBits
   nameWithType: SerialPort.DataBits
 - uid: Unosquare.IO.Ports.SerialPort.DiscardInBuffer
@@ -155,6 +162,7 @@ references:
   name: DiscardInBuffer
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_DiscardInBuffer_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.DiscardInBuffer
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.DiscardInBuffer
   nameWithType: SerialPort.DiscardInBuffer
 - uid: Unosquare.IO.Ports.SerialPort.DiscardOutBuffer
@@ -167,6 +175,7 @@ references:
   name: DiscardOutBuffer
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_DiscardOutBuffer_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.DiscardOutBuffer
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.DiscardOutBuffer
   nameWithType: SerialPort.DiscardOutBuffer
 - uid: Unosquare.IO.Ports.SerialPort.Dispose
@@ -185,6 +194,7 @@ references:
   name: Dispose
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_Dispose_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.Dispose
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.Dispose
   nameWithType: SerialPort.Dispose
 - uid: Unosquare.IO.Ports.SerialPort.Encoding
@@ -197,6 +207,7 @@ references:
   name: Encoding
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_Encoding_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.Encoding
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.Encoding
   nameWithType: SerialPort.Encoding
 - uid: Unosquare.IO.Ports.SerialPort.GetPortNames
@@ -209,6 +220,7 @@ references:
   name: GetPortNames
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_GetPortNames_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.GetPortNames
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.GetPortNames
   nameWithType: SerialPort.GetPortNames
 - uid: Unosquare.IO.Ports.SerialPort.Handshake
@@ -221,6 +233,7 @@ references:
   name: Handshake
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_Handshake_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.Handshake
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.Handshake
   nameWithType: SerialPort.Handshake
 - uid: Unosquare.IO.Ports.SerialPort.InfiniteTimeout
@@ -239,6 +252,7 @@ references:
   name: IsOpen
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_IsOpen_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.IsOpen
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.IsOpen
   nameWithType: SerialPort.IsOpen
 - uid: Unosquare.IO.Ports.SerialPort.NewLine
@@ -251,6 +265,7 @@ references:
   name: NewLine
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_NewLine_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.NewLine
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.NewLine
   nameWithType: SerialPort.NewLine
 - uid: Unosquare.IO.Ports.SerialPort.Open
@@ -263,6 +278,7 @@ references:
   name: Open
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_Open_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.Open
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.Open
   nameWithType: SerialPort.Open
 - uid: Unosquare.IO.Ports.SerialPort.Parity
@@ -275,6 +291,7 @@ references:
   name: Parity
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_Parity_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.Parity
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.Parity
   nameWithType: SerialPort.Parity
 - uid: Unosquare.IO.Ports.SerialPort.PortName
@@ -287,6 +304,7 @@ references:
   name: PortName
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_PortName_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.PortName
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.PortName
   nameWithType: SerialPort.PortName
 - uid: Unosquare.IO.Ports.SerialPort.Read(System.Byte[],System.Int32,System.Int32)
@@ -311,6 +329,7 @@ references:
   name: Read
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_Read_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.Read
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.Read
   nameWithType: SerialPort.Read
 - uid: Unosquare.IO.Ports.SerialPort.ReadBufferSize
@@ -323,6 +342,7 @@ references:
   name: ReadBufferSize
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_ReadBufferSize_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.ReadBufferSize
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.ReadBufferSize
   nameWithType: SerialPort.ReadBufferSize
 - uid: Unosquare.IO.Ports.SerialPort.ReadByte
@@ -335,6 +355,7 @@ references:
   name: ReadByte
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_ReadByte_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.ReadByte
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.ReadByte
   nameWithType: SerialPort.ReadByte
 - uid: Unosquare.IO.Ports.SerialPort.ReadChar
@@ -347,6 +368,7 @@ references:
   name: ReadChar
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_ReadChar_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.ReadChar
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.ReadChar
   nameWithType: SerialPort.ReadChar
 - uid: Unosquare.IO.Ports.SerialPort.ReadExisting
@@ -359,6 +381,7 @@ references:
   name: ReadExisting
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_ReadExisting_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.ReadExisting
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.ReadExisting
   nameWithType: SerialPort.ReadExisting
 - uid: Unosquare.IO.Ports.SerialPort.ReadLine
@@ -371,6 +394,7 @@ references:
   name: ReadLine
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_ReadLine_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.ReadLine
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.ReadLine
   nameWithType: SerialPort.ReadLine
 - uid: Unosquare.IO.Ports.SerialPort.ReadTimeout
@@ -383,6 +407,7 @@ references:
   name: ReadTimeout
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_ReadTimeout_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.ReadTimeout
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.ReadTimeout
   nameWithType: SerialPort.ReadTimeout
 - uid: Unosquare.IO.Ports.SerialPort.ReadTo(System.String)
@@ -395,6 +420,7 @@ references:
   name: ReadTo
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_ReadTo_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.ReadTo
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.ReadTo
   nameWithType: SerialPort.ReadTo
 - uid: Unosquare.IO.Ports.SerialPort.StopBits
@@ -407,6 +433,7 @@ references:
   name: StopBits
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_StopBits_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.StopBits
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.StopBits
   nameWithType: SerialPort.StopBits
 - uid: Unosquare.IO.Ports.SerialPort.Write(System.Byte[],System.Int32,System.Int32)
@@ -437,6 +464,7 @@ references:
   name: Write
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_Write_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.Write
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.Write
   nameWithType: SerialPort.Write
 - uid: Unosquare.IO.Ports.SerialPort.WriteBufferSize
@@ -449,6 +477,7 @@ references:
   name: WriteBufferSize
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_WriteBufferSize_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.WriteBufferSize
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.WriteBufferSize
   nameWithType: SerialPort.WriteBufferSize
 - uid: Unosquare.IO.Ports.SerialPort.WriteLine(System.String)
@@ -461,6 +490,7 @@ references:
   name: WriteLine
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_WriteLine_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.WriteLine
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.WriteLine
   nameWithType: SerialPort.WriteLine
 - uid: Unosquare.IO.Ports.SerialPort.WriteTimeout
@@ -473,6 +503,7 @@ references:
   name: WriteTimeout
   href: api/Unosquare.IO.Ports.SerialPort.html#Unosquare_IO_Ports_SerialPort_WriteTimeout_
   commentId: Overload:Unosquare.IO.Ports.SerialPort.WriteTimeout
+  isSpec: "True"
   fullName: Unosquare.IO.Ports.SerialPort.WriteTimeout
   nameWithType: SerialPort.WriteTimeout
 - uid: Unosquare.IO.Ports.StopBits
@@ -530,6 +561,7 @@ references:
   name: RelayController
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController__ctor_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.#ctor
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayController
   nameWithType: RelayController.RelayController
 - uid: Unosquare.TinySine.RelayModule.RelayController.BoardModel
@@ -542,6 +574,7 @@ references:
   name: BoardModel
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_BoardModel_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.BoardModel
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.BoardModel
   nameWithType: RelayController.BoardModel
 - uid: Unosquare.TinySine.RelayModule.RelayController.BoardVersion
@@ -554,6 +587,7 @@ references:
   name: BoardVersion
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_BoardVersion_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.BoardVersion
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.BoardVersion
   nameWithType: RelayController.BoardVersion
 - uid: Unosquare.TinySine.RelayModule.RelayController.ChangePassword(System.String)
@@ -566,6 +600,7 @@ references:
   name: ChangePassword
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_ChangePassword_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.ChangePassword
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.ChangePassword
   nameWithType: RelayController.ChangePassword
 - uid: Unosquare.TinySine.RelayModule.RelayController.DefaultPassword
@@ -584,6 +619,7 @@ references:
   name: Dispose
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_Dispose_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.Dispose
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.Dispose
   nameWithType: RelayController.Dispose
 - uid: Unosquare.TinySine.RelayModule.RelayController.Error
@@ -596,6 +632,7 @@ references:
   name: Error
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_Error_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.Error
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.Error
   nameWithType: RelayController.Error
 - uid: Unosquare.TinySine.RelayModule.RelayController.FirmwareVersion
@@ -608,6 +645,7 @@ references:
   name: FirmwareVersion
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_FirmwareVersion_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.FirmwareVersion
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.FirmwareVersion
   nameWithType: RelayController.FirmwareVersion
 - uid: Unosquare.TinySine.RelayModule.RelayController.GetRelaysStateDictionary
@@ -620,6 +658,7 @@ references:
   name: GetRelaysStateDictionary
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_GetRelaysStateDictionary_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.GetRelaysStateDictionary
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.GetRelaysStateDictionary
   nameWithType: RelayController.GetRelaysStateDictionary
 - uid: Unosquare.TinySine.RelayModule.RelayController.Item(Unosquare.TinySine.RelayModule.RelayNumber)
@@ -635,6 +674,7 @@ references:
   name: Item
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_Item_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.Item
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.Item
   nameWithType: RelayController.Item
 - uid: Unosquare.TinySine.RelayModule.RelayController.Open(System.String,System.String)
@@ -647,6 +687,7 @@ references:
   name: Open
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_Open_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.Open
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.Open
   nameWithType: RelayController.Open
 - uid: Unosquare.TinySine.RelayModule.RelayController.Password
@@ -659,6 +700,7 @@ references:
   name: Password
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_Password_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.Password
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.Password
   nameWithType: RelayController.Password
 - uid: Unosquare.TinySine.RelayModule.RelayController.Read
@@ -677,6 +719,7 @@ references:
   name: Read
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_Read_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.Read
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.Read
   nameWithType: RelayController.Read
 - uid: Unosquare.TinySine.RelayModule.RelayController.ReadAsync
@@ -695,6 +738,7 @@ references:
   name: ReadAsync
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_ReadAsync_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.ReadAsync
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.ReadAsync
   nameWithType: RelayController.ReadAsync
 - uid: Unosquare.TinySine.RelayModule.RelayController.RelayChannelCount
@@ -707,6 +751,7 @@ references:
   name: RelayChannelCount
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_RelayChannelCount_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.RelayChannelCount
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayChannelCount
   nameWithType: RelayController.RelayChannelCount
 - uid: Unosquare.TinySine.RelayModule.RelayController.RelayOperatingMode
@@ -719,6 +764,7 @@ references:
   name: RelayOperatingMode
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_RelayOperatingMode_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.RelayOperatingMode
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayOperatingMode
   nameWithType: RelayController.RelayOperatingMode
 - uid: Unosquare.TinySine.RelayModule.RelayController.RelayState01
@@ -731,6 +777,7 @@ references:
   name: RelayState01
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_RelayState01_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.RelayState01
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayState01
   nameWithType: RelayController.RelayState01
 - uid: Unosquare.TinySine.RelayModule.RelayController.RelayState02
@@ -743,6 +790,7 @@ references:
   name: RelayState02
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_RelayState02_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.RelayState02
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayState02
   nameWithType: RelayController.RelayState02
 - uid: Unosquare.TinySine.RelayModule.RelayController.RelayState03
@@ -755,6 +803,7 @@ references:
   name: RelayState03
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_RelayState03_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.RelayState03
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayState03
   nameWithType: RelayController.RelayState03
 - uid: Unosquare.TinySine.RelayModule.RelayController.RelayState04
@@ -767,6 +816,7 @@ references:
   name: RelayState04
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_RelayState04_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.RelayState04
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayState04
   nameWithType: RelayController.RelayState04
 - uid: Unosquare.TinySine.RelayModule.RelayController.RelayState05
@@ -779,6 +829,7 @@ references:
   name: RelayState05
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_RelayState05_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.RelayState05
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayState05
   nameWithType: RelayController.RelayState05
 - uid: Unosquare.TinySine.RelayModule.RelayController.RelayState06
@@ -791,6 +842,7 @@ references:
   name: RelayState06
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_RelayState06_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.RelayState06
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayState06
   nameWithType: RelayController.RelayState06
 - uid: Unosquare.TinySine.RelayModule.RelayController.RelayState07
@@ -803,6 +855,7 @@ references:
   name: RelayState07
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_RelayState07_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.RelayState07
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayState07
   nameWithType: RelayController.RelayState07
 - uid: Unosquare.TinySine.RelayModule.RelayController.RelayState08
@@ -815,6 +868,7 @@ references:
   name: RelayState08
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_RelayState08_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.RelayState08
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.RelayState08
   nameWithType: RelayController.RelayState08
 - uid: Unosquare.TinySine.RelayModule.RelayController.SetRelayStateAll(System.Boolean)
@@ -827,6 +881,7 @@ references:
   name: SetRelayStateAll
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_SetRelayStateAll_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.SetRelayStateAll
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.SetRelayStateAll
   nameWithType: RelayController.SetRelayStateAll
 - uid: Unosquare.TinySine.RelayModule.RelayController.Temperature
@@ -839,6 +894,7 @@ references:
   name: Temperature
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_Temperature_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.Temperature
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.Temperature
   nameWithType: RelayController.Temperature
 - uid: Unosquare.TinySine.RelayModule.RelayController.Trace
@@ -851,6 +907,7 @@ references:
   name: Trace
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_Trace_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.Trace
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.Trace
   nameWithType: RelayController.Trace
 - uid: Unosquare.TinySine.RelayModule.RelayController.VerifyPassword
@@ -863,6 +920,7 @@ references:
   name: VerifyPassword
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_VerifyPassword_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.VerifyPassword
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.VerifyPassword
   nameWithType: RelayController.VerifyPassword
 - uid: Unosquare.TinySine.RelayModule.RelayController.WorkingVoltage
@@ -875,6 +933,7 @@ references:
   name: WorkingVoltage
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_WorkingVoltage_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.WorkingVoltage
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.WorkingVoltage
   nameWithType: RelayController.WorkingVoltage
 - uid: Unosquare.TinySine.RelayModule.RelayController.Write(System.Byte[])
@@ -890,6 +949,7 @@ references:
   name: Write
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_Write_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.Write
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.Write
   nameWithType: RelayController.Write
 - uid: Unosquare.TinySine.RelayModule.RelayController.WriteAsync(System.Byte[])
@@ -905,6 +965,7 @@ references:
   name: WriteAsync
   href: api/Unosquare.TinySine.RelayModule.RelayController.html#Unosquare_TinySine_RelayModule_RelayController_WriteAsync_
   commentId: Overload:Unosquare.TinySine.RelayModule.RelayController.WriteAsync
+  isSpec: "True"
   fullName: Unosquare.TinySine.RelayModule.RelayController.WriteAsync
   nameWithType: RelayController.WriteAsync
 - uid: Unosquare.TinySine.RelayModule.RelayNumber
