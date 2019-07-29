@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "wczeCu3wlDUgC6lP09isYQ=="
+          "hash": "srkQRGLFwbbzRdj5RVD2Bw=="
         }
       },
       "is_incremental": false,
@@ -86,7 +86,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.SerialPort.html",
-          "hash": "tYc5JZLtqVOqIz3hbpmIVg=="
+          "hash": "mMmG72gniZQRhbPBfru2Xg=="
         }
       },
       "is_incremental": false,
@@ -110,7 +110,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.html",
-          "hash": "FjgzDFHDvXhuHSahDZGUsg=="
+          "hash": "hQ6hDKgUmeb1el2ADyjVSg=="
         }
       },
       "is_incremental": false,
@@ -198,17 +198,17 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 1,
-          "skipped_file_count": 1
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 8,
           "skipped_file_count": 8
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 1
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
