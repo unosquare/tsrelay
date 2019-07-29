@@ -271,10 +271,7 @@ namespace Unosquare.IO.Ports
         static extern int close_serial(int fd);
 #endif
 
-        public void Close()
-        {
-            ((IDisposable) this).Dispose();
-        }
+        public override void Close() => ((IDisposable) this).Dispose();
 
         void IDisposable.Dispose()
         {

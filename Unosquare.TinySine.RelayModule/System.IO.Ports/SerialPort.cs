@@ -25,7 +25,7 @@ using System.Text;
 namespace Unosquare.IO.Ports
 {
     /// <summary>
-    /// Represents a Serial Port component
+    /// Represents a Serial Port component.
     /// </summary>
     public class SerialPort
     {
@@ -601,10 +601,7 @@ namespace Unosquare.IO.Ports
         /// Reads the line.
         /// </summary>
         /// <returns></returns>
-        public string ReadLine()
-        {
-            return ReadTo(_newLine);
-        }
+        public string ReadLine() => ReadTo(_newLine);
 
         /// <summary>
         /// Reads to.
