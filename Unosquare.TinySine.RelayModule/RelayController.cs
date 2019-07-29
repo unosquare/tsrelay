@@ -7,7 +7,7 @@
     /// <summary>
     /// Represents a TinySine TOSR1 Relay Controller providing up to 8 relay channels
     /// Product Page: http://www.tinyosshop.com/index.php?route=product/product&path=141_142&product_id=947
-    /// Reference: http://www.tinyosshop.com/datasheet/TOSR14x%20User%20Manual.pdf
+    /// Reference: http://www.tinyosshop.com/datasheet/TOSR14x%20User%20Manual.pdf.
     /// </summary>
     /// <seealso cref="IDisposable" />
     public partial class RelayController : IDisposable
@@ -114,7 +114,7 @@
         public int FirmwareVersion { get; private set; }
 
         /// <summary>
-        /// Gets the current password
+        /// Gets the current password.
         /// </summary>
         public string Password { get; private set; }
 
@@ -172,35 +172,35 @@
         }
 
         /// <summary>
-        /// Gets or sets the state of the relay 1
+        /// Gets or sets the state of the relay 1.
         /// </summary>
         public bool RelayState01 { get { return this[RelayNumber.Relay01]; } set { this[RelayNumber.Relay01] = value; } }
         /// <summary>
-        /// Gets or sets the state of the relay 2
+        /// Gets or sets the state of the relay 2.
         /// </summary>
         public bool RelayState02 { get { return this[RelayNumber.Relay02]; } set { this[RelayNumber.Relay02] = value; } }
         /// <summary>
-        /// Gets or sets the state of the relay 3
+        /// Gets or sets the state of the relay 3.
         /// </summary>
         public bool RelayState03 { get { return this[RelayNumber.Relay03]; } set { this[RelayNumber.Relay03] = value; } }
         /// <summary>
-        /// Gets or sets the state of the relay 4
+        /// Gets or sets the state of the relay 4.
         /// </summary>
         public bool RelayState04 { get { return this[RelayNumber.Relay04]; } set { this[RelayNumber.Relay04] = value; } }
         /// <summary>
-        /// Gets or sets the state of the relay 5
+        /// Gets or sets the state of the relay 5.
         /// </summary>
         public bool RelayState05 { get { return this[RelayNumber.Relay05]; } set { this[RelayNumber.Relay05] = value; } }
         /// <summary>
-        /// Gets or sets the state of the relay 6
+        /// Gets or sets the state of the relay 6.
         /// </summary>
         public bool RelayState06 { get { return this[RelayNumber.Relay06]; } set { this[RelayNumber.Relay06] = value; } }
         /// <summary>
-        /// Gets or sets the state of the relay 7
+        /// Gets or sets the state of the relay 7.
         /// </summary>
         public bool RelayState07 { get { return this[RelayNumber.Relay07]; } set { this[RelayNumber.Relay07] = value; } }
         /// <summary>
-        /// Gets or sets the state of the relay 8
+        /// Gets or sets the state of the relay 8.
         /// </summary>
         public bool RelayState08 { get { return this[RelayNumber.Relay08]; } set { this[RelayNumber.Relay08] = value; } }
 

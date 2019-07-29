@@ -1,7 +1,7 @@
 ﻿namespace Unosquare.TinySine.RelayModule
 {
     /// <summary>
-    /// Enumerates the relay board operating modes
+    /// Enumerates the relay board operating modes.
     /// </summary>
     public enum RelayOperatingMode : byte
     {
@@ -16,7 +16,7 @@
     }
 
     /// <summary>
-    /// Enumerates the relay numbers on the relay board
+    /// Enumerates the relay numbers on the relay board.
     /// </summary>
     public enum RelayNumber : byte
     {
@@ -31,7 +31,7 @@
     }
 
     /// <summary>
-    /// Enumerates all operation codes (commands) of the board
+    /// Enumerates all operation codes (commands) of the board.
     /// </summary>
     internal enum OperationCode : byte
     {

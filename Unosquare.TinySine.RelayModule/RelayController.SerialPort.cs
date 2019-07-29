@@ -17,22 +17,22 @@
         #region Private Declarations
 
         /// <summary>
-        /// The read buffer length of the serial port
+        /// The read buffer length of the serial port.
         /// </summary>
         private const int ReadBufferLength = 1024; // 1kb
 
         /// <summary>
-        /// The default baud rate
+        /// The default baud rate.
         /// </summary>
         private const int DefaultBaudRate = 9600;
 
         /// <summary>
-        /// The default timeout
+        /// The default timeout.
         /// </summary>
         private static readonly TimeSpan DefaultTimeout = TimeSpan.FromSeconds(1);
 
         /// <summary>
-        /// The default password
+        /// The default password.
         /// </summary>
         public const string DefaultPassword = "123456";
 
@@ -50,7 +50,7 @@
         #region Helper Methods
 
         /// <summary>
-        /// Encodes given 6 digit password into a 3 byte little endian array
+        /// Encodes given 6 digit password into a 3 byte little endian array.
         /// </summary>
         /// <param name="sixDigitPassword">The six digit password.</param>
         /// <returns></returns>
@@ -59,7 +59,7 @@
         /// or
         /// sixDigitPassword
         /// or
-        /// sixDigitPassword
+        /// sixDigitPassword.
         /// </exception>
         private static byte[] EncodePassword(string sixDigitPassword)
         {
@@ -100,7 +100,7 @@
         }
 
         /// <summary>
-        /// Clears read-once properties of the relay board
+        /// Clears read-once properties of the relay board.
         /// </summary>
         private void Uninitialize()
         {
@@ -120,7 +120,7 @@
         /// </summary>
         /// <param name="portName">Name of the port.</param>
         /// <param name="sixDigitPassword">The six digit password.</param>
-        /// <exception cref="System.InvalidOperationException">Close</exception>
+        /// <exception cref="System.InvalidOperationException">Close.</exception>
         /// <exception cref="System.Security.SecurityException">Invalid password or failed synchronization.</exception>
         /// <exception cref="InvalidOperationException">Device is already open. Call the Close method first.</exception>
         public void Open(string portName, string sixDigitPassword = DefaultPassword)
@@ -158,7 +158,7 @@
         }
 
         /// <summary>
-        /// Writes data to the serial port asynchronously
+        /// Writes data to the serial port asynchronously.
         /// </summary>
         /// <param name="payload">The payload.</param>
         /// <returns></returns>
@@ -188,25 +188,19 @@
         }
 
         /// <summary>
-        /// Reads data from the serial port asynchronously with the default timeout and no expected packet size
+        /// Reads data from the serial port asynchronously with the default timeout and no expected packet size.
         /// </summary>
         /// <returns></returns>
-        public async Task<byte[]> ReadAsync()
-        {
-            return await ReadAsync(DefaultTimeout, 0);
-        }
+        public Task<byte[]> ReadAsync() => ReadAsync(DefaultTimeout, 0);
 
         /// <summary>
-        /// Flushes the serial port read data discarding all bytes in the read buffer
+        /// Flushes the serial port read data discarding all bytes in the read buffer.
         /// </summary>
         /// <returns></returns>
-        private int FlushReadBuffer()
-        {
-            return FlushReadBufferAsync().GetAwaiter().GetResult();
-        }
+        private int FlushReadBuffer() => FlushReadBufferAsync().GetAwaiter().GetResult();
 
         /// <summary>
-        /// Flushes the serial port read data discarding all bytes in the read buffer
+        /// Flushes the serial port read data discarding all bytes in the read buffer.
         /// </summary>
         /// <returns></returns>
         private async Task<int> FlushReadBufferAsync()
@@ -244,28 +238,22 @@
         /// <param name="timeout">The timeout.</param>
         /// <param name="expectedBytes">The expected bytes.</param>
         /// <returns></returns>
-        public byte[] Read(TimeSpan timeout, int expectedBytes)
-        {
-            return ReadAsync(timeout, expectedBytes).GetAwaiter().GetResult();
-        }
+        public byte[] Read(TimeSpan timeout, int expectedBytes) => ReadAsync(timeout, expectedBytes).GetAwaiter().GetResult();
 
         /// <summary>
-        /// Reads data from the serial port asynchronously with the default timeout and no expected packet size
+        /// Reads data from the serial port asynchronously with the default timeout and no expected packet size.
         /// </summary>
         /// <returns></returns>
-        public byte[] Read()
-        {
-            return Read(DefaultTimeout, 0);
-        }
+        public byte[] Read() => Read(DefaultTimeout, 0);
 
         /// <summary>
         /// Reads bytes from the serial port.
         /// </summary>
         /// <param name="timeout">The timeout.</param>
-        /// <param name="expectedBytes">The expected bytes. Use a value of zero or less to read until no more bytes are available</param>
+        /// <param name="expectedBytes">The expected bytes. Use a value of zero or less to read until no more bytes are available.</param>
         /// <returns></returns>
-        /// <exception cref="InvalidOperationException">Open</exception>
-        /// <exception cref="System.InvalidOperationException">Open</exception>
+        /// <exception cref="InvalidOperationException">Open.</exception>
+        /// <exception cref="System.InvalidOperationException">Open.</exception>
         public async Task<byte[]> ReadAsync(TimeSpan timeout, int expectedBytes)
         {
             if (SerialPort == null || SerialPort.IsOpen == false)

@@ -17,7 +17,7 @@ using System.Runtime.InteropServices;
 namespace Unosquare.IO.Ports
 {
     /// <summary>
-    /// Enums the Stop bits
+    /// Enums the Stop bits.
     /// </summary>
     public enum StopBits
     {
@@ -28,7 +28,7 @@ namespace Unosquare.IO.Ports
     }
 
     /// <summary>
-    /// Enums the parity modes
+    /// Enums the parity modes.
     /// </summary>
     public enum Parity
     {

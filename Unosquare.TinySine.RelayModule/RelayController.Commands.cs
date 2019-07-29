@@ -209,7 +209,7 @@ namespace Unosquare.TinySine.RelayModule
         }
 
         /// <summary>
-        /// Gets the state of all relays as a byte. Each bit represents the state of each relay
+        /// Gets the state of all relays as a byte. Each bit represents the state of each relay.
         /// </summary>
         /// <returns></returns>
         private byte GetRelaysStateAll()
