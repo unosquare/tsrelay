@@ -74,7 +74,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.Parity.html",
-          "hash": "DuzrKuyqcmkFYm6EGIKv3g=="
+          "hash": "lg0k6UsOjoj8DQLIKCogPg=="
         }
       },
       "is_incremental": false,
@@ -98,7 +98,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.StopBits.html",
-          "hash": "ouOEejKkVuqGa8JGNAAiUw=="
+          "hash": "fP5sIIpgL01XhYi9KtG+rA=="
         }
       },
       "is_incremental": false,
@@ -110,7 +110,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.html",
-          "hash": "hQ6hDKgUmeb1el2ADyjVSg=="
+          "hash": "3/rWaRmGstijdn6y/zEr2Q=="
         }
       },
       "is_incremental": false,
@@ -122,7 +122,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayController.html",
-          "hash": "tU/Q1nqdzS+xgRAUA40Tjg=="
+          "hash": "T40/wg6xyL63W4zyx3oE/A=="
         }
       },
       "is_incremental": false,
@@ -134,7 +134,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayNumber.html",
-          "hash": "FolivqaaLyjdzCic4gxnMA=="
+          "hash": "XZwyfM9ojh9T+dWB1pjeJg=="
         }
       },
       "is_incremental": false,
@@ -146,7 +146,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayOperatingMode.html",
-          "hash": "IIPe1D8zUsaibtRpjtWAug=="
+          "hash": "/NJFr5WkI8irffbKoQgF8Q=="
         }
       },
       "is_incremental": false,
@@ -158,7 +158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.html",
-          "hash": "nUp8lz4AX9iJhCDFItnVsA=="
+          "hash": "tu89u0UPG3xkOpIJqIWgAA=="
         }
       },
       "is_incremental": false,
@@ -198,17 +198,17 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 8,
-          "skipped_file_count": 8
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 1,
           "skipped_file_count": 1
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 8,
+          "skipped_file_count": 8
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
