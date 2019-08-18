@@ -1,25 +1,26 @@
 ﻿namespace Unosquare.TinySine.RelayModule.Sample
 {
+    using Swan;
+    using Swan.Logging;
     using System;
     using System.Collections.Generic;
-    using Swan;
 
     /// <summary>
     /// This program is a simple console test that  
     /// </summary>
-    class Program
+    public class Program
     {
         /// <summary>
         /// Main entry point
         /// </summary>
         /// <param name="args">The arguments.</param>
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            using (var relayBoard = new RelayController((s) => s.Trace(), (e) => e.Error()))
+            using (var relayBoard = new RelayController(s => s.Trace(), (e) => e.Error()))
             {
                 var isOpen = false;
                 var password = RelayController.DefaultPassword;
-                var serialPort = "COM6";
+                const string serialPort = "COM6";
 
                 while (isOpen == false)
                 {
@@ -39,7 +40,7 @@
 
                 while (true)
                 {
-                    var selectedOption = "Select an option".ReadPrompt(ActionOptions, "Exit this program");
+                    var selectedOption = Terminal.ReadPrompt("Select an option", ActionOptions, "Exit this program");
                     if (selectedOption.Key == ConsoleKey.Q)
                     {
                         $"Board: Model: {relayBoard.BoardModel}, Version: {relayBoard.BoardVersion}, FW: {relayBoard.FirmwareVersion}, Channels: {relayBoard.RelayChannelCount}, Mode: {relayBoard.RelayOperatingMode}".Info();
@@ -50,15 +51,8 @@
                     }
                     else if (selectedOption.Key == ConsoleKey.E)
                     {
-                        var newOpModeKey = "Enter Operating Mode (L for Latching, anything else, Momentary): ".ReadKey(false);
-                        if (newOpModeKey.Key == ConsoleKey.L)
-                        {
-                            relayBoard.RelayOperatingMode = RelayOperatingMode.Latching;
-                        }
-                        else
-                        {
-                            relayBoard.RelayOperatingMode = RelayOperatingMode.Momentary;
-                        }
+                        var newOpModeKey = Terminal.ReadKey("Enter Operating Mode (L for Latching, anything else, Momentary): ", false);
+                        relayBoard.RelayOperatingMode = newOpModeKey.Key == ConsoleKey.L ? RelayOperatingMode.Latching : RelayOperatingMode.Momentary;
 
                         $"Relay Operating Mode is now: {relayBoard.RelayOperatingMode}".Info();
                     }
@@ -81,7 +75,7 @@
                     }
                     else if (selectedOption.Key == ConsoleKey.D)
                     {
-                        var relayNumber = (RelayNumber)"Enter a relay number from 1 to 8".ReadNumber(1);
+                        var relayNumber = (RelayNumber)Terminal.ReadNumber("Enter a relay number from 1 to 8", 1);
                         if ((int)relayNumber >= 1 && (int)relayNumber <= 8)
                         {
                             relayBoard[relayNumber] = true;
@@ -93,7 +87,7 @@
                     }
                     else if (selectedOption.Key == ConsoleKey.F)
                     {
-                        var relayNumber = (RelayNumber)"Enter a relay number from 1 to 8".ReadNumber(1);
+                        var relayNumber = (RelayNumber)Terminal.ReadNumber("Enter a relay number from 1 to 8", 1);
                         if ((int)relayNumber >= 1 && (int)relayNumber <= 8)
                         {
                             relayBoard[relayNumber] = false;
@@ -111,7 +105,7 @@
 
             }
 
-            "Press any key to continue . . .".ReadKey(true);
+            Terminal.ReadKey("Press any key to continue . . .");
         }
 
         /// <summary>
@@ -125,7 +119,7 @@
 
             while (!enteredSixDigitPassword)
             {
-                var passwordNumber = "Enter the 6-digit password".ReadNumber(-1);
+                var passwordNumber = Terminal.ReadNumber("Enter the 6-digit password", -1);
 
                 if (passwordNumber >= 0 && passwordNumber <= 999999)
                 {
