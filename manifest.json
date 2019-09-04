@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "QGKiks0wwqhLtBFsWAxxFQ=="
+          "hash": "T7YBpx3DCtiSJEFrdCbUpw=="
         }
       },
       "is_incremental": false,
@@ -74,7 +74,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.Parity.html",
-          "hash": "f6OlMcFDX35y7ROklGD5Hg=="
+          "hash": "MZT+PMNzDoGtO33XDsEyHg=="
         }
       },
       "is_incremental": false,
@@ -86,7 +86,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.SerialPort.html",
-          "hash": "Q/GnxN5Oy8zrrYUOSF1SHw=="
+          "hash": "mCOAAx4GXHuyhvRNaAupog=="
         }
       },
       "is_incremental": false,
@@ -98,7 +98,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.StopBits.html",
-          "hash": "1Xl1/6YwTm7ofvhZ41A+cA=="
+          "hash": "JehvDE/241baSjtxCoilMg=="
         }
       },
       "is_incremental": false,
@@ -110,7 +110,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.IO.Ports.html",
-          "hash": "H5yivouc9blKjs25Bf1nZA=="
+          "hash": "2D40flOnnV7xZXP2YzY1BQ=="
         }
       },
       "is_incremental": false,
@@ -122,7 +122,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayController.html",
-          "hash": "m2C3tYt//rLBkguZY+gtKw=="
+          "hash": "hSz2NF4m2RXGpd0tkRtf8Q=="
         }
       },
       "is_incremental": false,
@@ -134,7 +134,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayNumber.html",
-          "hash": "fo2sVpHpuw6ziNomqIAt1A=="
+          "hash": "PBb1kDcUzm3MqmH4JHwSxA=="
         }
       },
       "is_incremental": false,
@@ -146,7 +146,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.RelayOperatingMode.html",
-          "hash": "Piu8jvM9suh2snkeXmsWsQ=="
+          "hash": "8JOEq0ggUuIKuQZGLKJmNw=="
         }
       },
       "is_incremental": false,
@@ -158,7 +158,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Unosquare.TinySine.RelayModule.html",
-          "hash": "xi+YVUyeo3QdByeYhZvcVw=="
+          "hash": "iuaGa0WFMZKVlT7SwQSe4A=="
         }
       },
       "is_incremental": false,
